@@ -7,41 +7,53 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>    
-    <!-- Add HTML content, SVG drawing area, ... -->
+    <select id="seasonDropDown" style="font-size: 20px">Select Season #
+    </select>
     <div class="flex-container">
         <div>
-            1
+            <p>Characters</p>
             <svg id="chart1"></svg>
         </div>
         <div>
-            2
+            <p>Episodes</p>
             <svg id="chart2"></svg>
         </div>
         <div>
-            3
-            <svg id="chart3"></svg>
+            <table id="cast">
+                <tr>
+                    <th> Cast </th>
+                    <th> Image </th>
+                </tr>
+                <tr>
+                    <td> Actor 1 </td>
+                    <td><img src="imgs/sample.png" alt="Actor 1" /></td>
+                </tr>
+                <tr>
+                    <td> Actor 2 </td>
+                    <td><img src="imgs/sample.png" alt="Actor 2" /></td>
+                </tr>
+                <tr>
+                    <td> Actor 3 </td>
+                    <td><img src="imgs/sample.png" alt="Actor 3" /></td>
+                </tr>
+            </table>
         </div>  
     </div>
 
     <div class="flex-container">
         <div>
-            4
+            wordcloud here
             <svg id="chart4"></svg>
         </div>
-        <div>
-            5
-            <svg id="chart5"></svg>
-        </div>
-        <div>
-            6
-            <svg id="chart6"></svg>
-        </div>  
-      </div>
+    </div>
     
     <!-- D3 bundle -->
     <script src="js/d3.v6.min.js"></script>
 
     <!-- Our JS code -->
     <script src="js/main.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="js/wordcloud.js"></script>
+
 </body>
 </html>
