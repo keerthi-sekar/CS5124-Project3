@@ -132,7 +132,7 @@ class Barchart {
           .attr('width', vis.xScale.bandwidth())
           .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
           .attr('y', d => vis.yScale(vis.yValue(d)))
-          .attr('fill', '#023020')
+          .attr('fill', '#2962dd')
   
       bars
         .on('mouseover', (event,d) => {
