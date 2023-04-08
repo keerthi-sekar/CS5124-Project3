@@ -1,14 +1,18 @@
-
-//season_number,episode_number,scene_number,character,dialogue 
+let data;
+//season_number,episode_number,scene,character,dialogue 
 d3.csv('data/dummy_data.csv')
-.then(data => {
+.then(_data => {
+  data = _data;
+
     data.forEach(d => {
       d.season_number = +d.season_number;
       d.episode_number = +d.episode_number;
-      d.scene_number = +scene_number;
+      d.scene = +d.scene;
+      d.character = d.character;
       d.dialogue = d.dialogue;
-
     });
- 
+
+    console.log(data);
+
   })
   .catch(error => console.error(error));
