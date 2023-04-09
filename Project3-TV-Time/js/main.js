@@ -1,5 +1,6 @@
 let data, barchartA, barchartB, wordcloud;
-let season_options = ["Select Season #",1,2,3,4];
+let season_options = ["All Seasons"];
+let episode_options = ["All Episodes"]
 //season_number,episode_number,scene,character,dialogue 
 d3.csv('data/dummy_data.csv')
 .then(_data => {
@@ -21,8 +22,40 @@ d3.csv('data/dummy_data.csv')
 
     var character_rollup = d3.rollups(data, v => v.length, d => d.character);
     var dialogue_rollup = d3.rollups(data, v => v.length, d => d.dialogue);
-    var episode_number = d3.rollups(data, v => v.length, d => d.episode_number);
+    var episode_rollup = d3.rollups(data, v => v.length, d => d.episode_number);
     var season_rollup = d3.rollups(data, v => v.length, d => d.season_number);
+
+    season_rollup.forEach(v => {
+      season_options.push("Season " + v[0]);
+    })
+
+    season_options.sort();
+
+    episode_rollup.forEach(v => {
+      episode_options.push("Episode " + v[0]);
+    })
+
+    episode_options.sort();
+
+    var selectSeason = document.getElementById("seasonDropDown");
+
+    for(var i = 0; i < season_options.length; i++) {
+        var opt = season_options[i];
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        selectSeason.appendChild(el);
+    }
+    
+    var selectEpisode = document.getElementById("episodeDropDown");
+
+    for(var i = 0; i < episode_options.length; i++) {
+        var opt = episode_options[i];
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        selectEpisode.appendChild(el);
+    }
 
     barchartA = new Barchart({
 			parentElement: '#chart1',
@@ -34,15 +67,15 @@ d3.csv('data/dummy_data.csv')
     barchartB = new Barchart({
 			parentElement: '#chart2',
 			xAxisTitle: 'Episodes'
-		  }, data, episode_number);
+		  }, data, episode_rollup);
 		
 		barchartB.updateVis();
 
-    /* wordcloud = new WordCloud({
+    wordcloud = new WordCloud({
       parentElement: '#chart4'
     }, dialogue_rollup)
     wordcloud.initVis();
- */
+ 
   })
   .catch(error => console.error(error));
 
@@ -52,12 +85,3 @@ d3.csv('data/dummy_data.csv')
 
   }) */
 
-var select = document.getElementById("seasonDropDown");
-
-for(var i = 0; i < season_options.length; i++) {
-    var opt = season_options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}

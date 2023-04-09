@@ -1,11 +1,12 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     font-family: Segoe UI;
-  }
+    background-color: #79a4ff5e;
+}
 
 .flex-container {
     display: flex;
@@ -44,7 +45,7 @@
 
 table
 {
-    width: auto;
+    width: 400px;
     font: 19px;
 }
 table, th, td
@@ -55,5 +56,6 @@ table, th, td
 }
 img
 {
-    width: 15%;
+    width: 45%;
+    align-content: center;
 }
