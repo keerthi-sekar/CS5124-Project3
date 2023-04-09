@@ -11,7 +11,7 @@ class Barchart {
         parentElement: _config.parentElement,
         containerWidth: _config.containerWidth || 550,
         containerHeight: _config.containerHeight || 650,
-        margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 30},
+        margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 40},
         reverseOrder: _config.reverseOrder || false,
         tooltipPadding: _config.tooltipPadding || 15,
         xAxisTitle: _config.xAxisTitle || ' ',
