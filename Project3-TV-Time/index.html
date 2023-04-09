@@ -6,13 +6,80 @@
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>    
-    <!-- Add HTML content, SVG drawing area, ... -->
+<body>
+    <h1><center>Project 3: TV-Time</center></h1> 
+    <h2><center>TV Show: The Good Place</center></h2> 
+    <select id="seasonDropDown" style="font-size: 20px">Select Season #
+    </select>
+    <select id="episodeDropDown" style="font-size: 20px">Select Season #
+    </select>
+    <a href="https://www.imdb.com/title/tt4955642/">The Good Place (IMDb)</a>
+
+    <div class="flex-container">
+        <div>
+            <p>Characters</p>
+            <svg id="chart1"></svg>
+        </div>
+        <div>
+            <p>Episodes</p>
+            <svg id="chart2"></svg>
+        </div>
+        <div>
+            <center><img src="imgs/goodplace-img.png" alt="The Good Place"/></center>
+            <center><table id="cast">
+                <tr>
+                    <th> Character </th>
+                    <th> Actor </th>
+                    <th> Actor Profile </th>
+                </tr>
+                <tr>
+                    <td> Eleanor Shellstrop </td>
+                    <td> Kristen Bell </td>
+                    <td> <a href="https://www.imdb.com/name/nm0068338/?ref_=ttfc_fc_cl_t1">Profile</a></td>
+                </tr>
+                <tr>
+                    <td> Chidi Anagonya </td>
+                    <td> William Harper </td>
+                    <td> <a href="https://www.imdb.com/name/nm2860379/?ref_=ttfc_fc_cl_t2">Profile</a></td>
+                </tr>
+                <tr>
+                    <td> Tahani Al-Jamil </td>
+                    <td> Jameela Jamil </td>
+                    <td> <a href="https://www.imdb.com/name/nm3553139/?ref_=ttfc_fc_cl_t3">Profile</a></td>
+                </tr>
+                <tr>
+                    <td> Janet </td>
+                    <td> D'Arcy Carden </td>
+                    <td> <a href="https://www.imdb.com/name/nm3639013/?ref_=ttfc_fc_cl_t4">Profile</a></td>
+                </tr>
+                <tr>
+                    <td> Jason Mendosa </td>
+                    <td> Manny Jacinto </td>
+                    <td> <a href="https://www.imdb.com/name/nm3254274/?ref_=ttfc_fc_cl_t5">Profile</a></td>
+                </tr>
+                <tr>
+                    <td> Michael </td>
+                    <td> Ted Danson </td>
+                    <td> <a href="https://www.imdb.com/name/nm0001101/?ref_=ttfc_fc_cl_t6">Profile</a></td>
+                </tr>
+            </table></center>
+        </div>  
+    </div>
+
+    <div class="flex-container">
+        <div>
+            <svg id="chart4"></svg>
+        </div>
+    </div>
     
     <!-- D3 bundle -->
     <script src="js/d3.v6.min.js"></script>
 
     <!-- Our JS code -->
     <script src="js/main.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
+    <script src="js/wordcloud.js"></script>
+
 </body>
 </html>
