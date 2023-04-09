@@ -10,8 +10,8 @@ class Barchart {
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: _config.containerWidth || 550,
-        containerHeight: _config.containerHeight || 500,
-        margin: _config.margin || {top: 10, right: 10, bottom: 20, left: 30},
+        containerHeight: _config.containerHeight || 650,
+        margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 30},
         reverseOrder: _config.reverseOrder || false,
         tooltipPadding: _config.tooltipPadding || 15,
         xAxisTitle: _config.xAxisTitle || ' ',
@@ -149,7 +149,13 @@ class Barchart {
           d3.select('#tooltip').style('display', 'none');
         });
       // Update axes
-      vis.xAxisG.call(vis.xAxis);
+      vis.xAxisG.call(vis.xAxis)
+          .selectAll("text")  
+          .style("text-anchor", "end")
+          .attr("dx", "-.8em")
+          .attr("dy", ".15em")
+          .attr("transform", "rotate(-65)");
+
       vis.yAxisG.call(vis.yAxis);
     }
   }
