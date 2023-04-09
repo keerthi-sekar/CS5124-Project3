@@ -1,29 +1,28 @@
 let data, barchartA, barchartB, wordcloud;
 let season_options = ["All Seasons"];
 let episode_options = ["All Episodes"]
-//season_number,episode_number,scene,character,dialogue 
+//season,episode,character,line
 d3.csv('data/dummy_data.csv')
 .then(_data => {
   data = _data;
 
     data.forEach(d => {
-      d.season_number = +d.season_number;
-      d.episode_number = +d.episode_number;
-      d.scene = +d.scene;
+      d.season = +d.season;
+      d.episode = +d.episode;
       d.character = d.character;
-      d.dialogue = d.dialogue;
+      d.line = d.line;
     });
 
     console.log(data);
 
-    data = data.sort(function (a,b) {return d3.ascending(a.season_number, b.season_number);});
-    data = data.sort(function (a,b) {return d3.ascending(a.episode_number, b.episode_number);});
+    data = data.sort(function (a,b) {return d3.ascending(a.season, b.season);});
+    data = data.sort(function (a,b) {return d3.ascending(a.episode, b.episode);});
     data = data.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
 
     var character_rollup = d3.rollups(data, v => v.length, d => d.character);
-    var dialogue_rollup = d3.rollups(data, v => v.length, d => d.dialogue);
-    var episode_rollup = d3.rollups(data, v => v.length, d => d.episode_number);
-    var season_rollup = d3.rollups(data, v => v.length, d => d.season_number);
+    var line_rollup = d3.rollups(data, v => v.length, d => d.line);
+    var episode_rollup = d3.rollups(data, v => v.length, d => d.episode);
+    var season_rollup = d3.rollups(data, v => v.length, d => d.season);
 
     season_rollup.forEach(v => {
       season_options.push("Season " + v[0]);
@@ -73,7 +72,7 @@ d3.csv('data/dummy_data.csv')
 
     wordcloud = new WordCloud({
       parentElement: '#chart4'
-    }, dialogue_rollup)
+    }, line_rollup)
     wordcloud.initVis();
  
   })

@@ -1,101 +1,1086 @@
-season_number,episode_number,scene,character,dialogue
-2,9,3,Bob,bukut
-4,1,2,Lauren,samhezdag
-1,7,1,Larry,zacat
-3,1,2,Andrea,vole
-1,4,2,Andrea,awzak
-3,9,1,Bob,hannif
-3,10,1,Rachel,ceeri
-3,5,2,Rachel,olopud
-4,6,2,Morris,ketpuca
-1,5,1,Larry,sucbi
-2,10,1,Rachel,opu
-2,1,2,Rachel,zu
-3,6,3,Andrea,ocu
-3,1,2,Rachel,zug
-2,1,2,Larry,genudar
-4,7,3,Rachel,je
-1,7,3,Bob,sap
-3,3,1,Andrea,eminiub
-1,1,2,Morris,goim
-3,6,3,Bob,jafpih
-2,1,3,Larry,pikjowov
-3,10,1,Rachel,for
-3,7,1,Bob,nu
-1,6,3,Larry,gibeg
-4,9,1,Larry,piola
-1,1,2,Bob,vokruzuz
-3,1,1,Morris,koda
-1,10,3,Bob,lawkemvuk
-4,6,1,Lauren,deoma
-1,6,1,Andrea,upococ
-1,6,3,Larry,damu
-3,10,2,Bob,fatna
-1,7,3,Larry,asmakzur
-3,10,3,Bob,tod
-2,1,2,Bob,dohol
-3,10,2,Andrea,calbopka
-4,6,2,Bob,fuduzoti
-3,5,3,Larry,hof
-4,7,3,Morris,sifire
-4,9,1,Lauren,ifi
-2,2,3,Bob,nokrivip
-4,10,2,Rachel,vahuli
-2,10,3,Lauren,nokhip
-2,8,2,Morris,boruz
-3,2,3,Rachel,ik
-1,10,2,Larry,bajonu
-4,9,3,Morris,biloz
-3,4,1,Bob,peg
-4,6,2,Andrea,tolrafhu
-1,8,2,Rachel,op
-1,3,3,Morris,pueca
-4,6,1,Rachel,ru
-1,1,1,Andrea,dohipaz
-4,4,3,Lauren,baneco
-4,4,2,Rachel,noca
-3,5,3,Lauren,guadadat
-3,3,1,Morris,pamfecig
-1,4,2,Andrea,ugohuoc
-2,1,2,Larry,efo
-1,1,3,Andrea,danfo
-4,3,2,Rachel,pamgo
-1,10,2,Lauren,gol
-4,4,2,Andrea,igo
-1,1,2,Morris,pazoco
-1,3,2,Larry,wovec
-4,3,1,Andrea,mizinopug
-2,2,3,Larry,odofir
-4,6,1,Bob,hucnu
-2,3,2,Lauren,owibed
-1,2,2,Larry,ur
-2,10,3,Morris,ibe
-1,9,3,Morris,jo
-3,7,3,Andrea,inuohi
-1,2,1,Lauren,iwa
-1,7,1,Rachel,rimaaho
-3,4,3,Morris,bigroh
-3,9,3,Bob,pu
-1,10,2,Morris,daken
-1,5,3,Lauren,bule
-2,1,3,Bob,huzinip
-4,1,1,Larry,gonuja
-2,6,3,Andrea,irbem
-4,9,2,Bob,fazetle
-3,10,2,Lauren,vacaseri
-1,8,2,Morris,kavaccu
-1,3,3,Andrea,nifov
-3,10,2,Morris,ziow
-2,3,1,Andrea,bidobtib
-3,3,3,Larry,jajban
-4,6,1,Larry,so
-3,2,3,Rachel,me
-1,10,3,Bob,uhirora
-4,3,2,Morris,debbicri
-1,2,2,Rachel,ramco
-1,8,2,Larry,terpuwu
-4,9,2,Lauren,dapmivol
-2,5,2,Bob,ki
-4,6,2,Bob,hu
-4,7,1,Lauren,mu
-2,8,3,Andrea,feik
+season,episode,character,line
+1,1,Michael,Eleanor?
+1,1,Michael,Come on in.
+1,1,Michael,"Hi, Eleanor."
+1,1,Michael,I'm Michael.
+1,1,Michael,How are you today?
+1,1,Eleanor Shellstrop,I'm great.
+1,1,Eleanor Shellstrop,Thanks for asking.
+1,1,Eleanor Shellstrop,"Oh, one question."
+1,1,Eleanor Shellstrop,Where am I?
+1,1,Eleanor Shellstrop,"Who are you, and what's going on?"
+1,1,Michael,"Right, so, you, Eleanor Shellstrop, are dead."
+1,1,Michael,"Your life on Earth has ended, and you are now in the next phase of your existence in the universe."
+1,1,Eleanor Shellstrop,Cool.
+1,1,Eleanor Shellstrop,Cool.
+1,1,Eleanor Shellstrop,I have some questions.
+1,1,Michael,Thought you might.
+1,1,Eleanor Shellstrop,How did I die?
+1,1,Eleanor Shellstrop,I don't remember.
+1,1,Michael,"Yes, um, in cases of traumatic or embarrassing deaths, we erase the memory to allow for a peaceful transition."
+1,1,Michael,Are you sure you want to hear?
+1,1,Michael,"All right, so you were in a grocery store parking lot."
+1,1,Michael,"You dropped a bottle of something called, ""Lonely Gal Margarita Mix for One""."
+1,1,Michael,"And when you bent down to pick it up, a long column of shopping carts that were being returned to the shopping cart collection area rolled out of control and plowed right into you."
+1,1,Eleanor Shellstrop,Oof.
+1,1,Eleanor Shellstrop,That's how I died?
+1,1,Michael,"No, sorry, there's more."
+1,1,Michael,"You were able to grab on to the front of the column of shopping carts, but it'd swept you right out into the street where you were struck and killed by a mobile billboard truck advertising an erectile dysfunction pill called ""Engorge-ulate""."
+1,1,Michael,"Funnily enough, the first EMT to arrive was an ex-boyfriend of yours --"
+1,1,Eleanor Shellstrop,"Okay, that's I get it, thank you."
+1,1,Michael,"Oh, okay, sorry."
+1,1,Eleanor Shellstrop,"Um, so who was right?"
+1,1,Eleanor Shellstrop,I mean about all of this?
+1,1,Michael,"Well, let's see."
+1,1,Michael,"Hindus are a little bit right, Muslims a little bit."
+1,1,Michael,"Jews, Christians, Buddhists, every religion guessed about 5%, except for Doug Forcett."
+1,1,Eleanor Shellstrop,Who's Doug Forcett?
+1,1,Michael,"Well, Doug was a stoner kid who lived in Calgary during the 1970s."
+1,1,Michael,"One night, he got really high on mushrooms, and his best friend, Randy, said, ""Hey, what do you think happens after we die?"""
+1,1,Michael,And Doug just launched into this long monologue where he got like 92% correct.
+1,1,Michael,"I mean, we couldn't believe what we were hearing."
+1,1,Michael,"That's him, actually, right up there."
+1,1,Michael,He's pretty famous around here.
+1,1,Michael,I'm very lucky to have that.
+1,1,Eleanor Shellstrop,So maybe my biggest question.
+1,1,Eleanor Shellstrop,Am I
+1,1,Eleanor Shellstrop,"I mean, is this"
+1,1,Eleanor Shellstrop,Or
+1,1,Michael,"Well, it's not the heaven-or-hell idea that you were raised on."
+1,1,Michael,"But generally speaking, in the afterlife, there's a Good Place and there's a Bad Place."
+1,1,Michael,You're in The Good Place.
+1,1,Michael,"You're okay, Eleanor."
+1,1,Michael,You're in The Good Place.
+1,1,Eleanor Shellstrop,"Well, that's good."
+1,1,Michael,Sure is.
+1,1,Michael,"Okay, let's take a walk, shall we?"
+1,1,Eleanor Shellstrop,"Oh, did I have a purse?"
+1,1,Eleanor Shellstrop,"No, I'm dead, right."
+1,1,Eleanor Shellstrop,Okay.
+1,1,Michael,"So, this is how it works."
+1,1,Michael,The Good Place is divided into distinct neighborhoods.
+1,1,Michael,Each one contains exactly 322 people who have been perfectly selected to blend together into a blissful harmonic balance.
+1,1,Eleanor Shellstrop,Do all the neighborhoods look like this?
+1,1,Michael,"No, every neighborhood is unique."
+1,1,Michael,"Some have warm weather, some cold."
+1,1,Michael,"Some are cities, some farmland."
+1,1,Michael,"But in each one, every blade of grass, every ladybug, every detail has been precisely designed and calibrated for its residents."
+1,1,Eleanor Shellstrop,There's a lot of frozen yogurt places.
+1,1,Michael,Yeah.
+1,1,Michael,That's the one thing we put in all the neighborhoods.
+1,1,Michael,People love frozen yogurt.
+1,1,Michael,I don't know what to tell you.
+1,1,Michael,"You're gonna have a million more questions, I know."
+1,1,Michael,"For right now, better grab a seat."
+1,1,Michael,Movie's about to begin.
+1,1,Michael,Ah.
+1,1,Michael,"Hello, everyone."
+1,1,Michael,And welcome to your first day in the afterlife.
+1,1,Michael,"You were all, simply put, good people."
+1,1,Michael,But how do we know that you were good?
+1,1,Michael,How are we sure?
+1,1,Michael,"During your time on Earth, every one of your actions had a positive or a negative value, depending on how much good or bad that action put into the universe."
+1,1,Michael,"Every sandwich you ate, every time you bought a magazine, every single thing you did had an effect that rippled out over time and ultimately created some amount of good or bad."
+1,1,Michael,You know how some people pull into the breakdown lane when there's traffic?
+1,1,Michael,"And they think to themselves, ""Ah, who cares? No one's watching."""
+1,1,Michael,We were watching.
+1,1,Michael,Surprise!
+1,1,Michael,"Anyway, when your time on Earth has ended, we calculate the total value of your life using our perfectly accurate measuring system."
+1,1,Michael,"Only the people with the very highest scores, the true cream of the crop, get to come here, to The Good Place."
+1,1,Michael,"What happens to everyone else, you ask?"
+1,1,Michael,Don't worry about it.
+1,1,Michael,"The point is, you are here because you lived one of the very best lives that could be lived."
+1,1,Michael,And you won't be alone.
+1,1,Michael,Your true soulmate is here too.
+1,1,Michael,That's right.
+1,1,Michael,Soulmates are real.
+1,1,Michael,"One of the other people in your neighborhood is your actual soulmate, and you will spend eternity together."
+1,1,Michael,So welcome to eternal happiness.
+1,1,Michael,Welcome to The Good Place.
+1,1,Michael,Sponsored by  otters holding hands while they sleep.
+1,1,Michael,You know the way you feel when you see a picture of two otters holding hands?
+1,1,Michael,That's how you're gonna feel every day.
+1,1,Eleanor Shellstrop,So who is in The Bad Place that would shock me?
+1,1,Michael,"Uh well, Mozart, Picasso, Elvis, basically every artist ever, uh, every US president except Lincoln."
+1,1,Eleanor Shellstrop,That sounds about right.
+1,1,Eleanor Shellstrop,What about Florence Nightingale?
+1,1,Michael,"It was close, but, no, she didn't make it."
+1,1,Eleanor Shellstrop,"Wow, all those amazing people down there, it just seems so hard to believe."
+1,1,Michael,"Again, it's an incredibly selective system."
+1,1,Michael,Most people don't make it here.
+1,1,Michael,"But you, a lawyer who got innocent people off death row, you're special, Eleanor."
+1,1,Michael,"And by the way, welcome to your new home."
+1,1,Michael,"Oh, it's perfect, isn't it?"
+1,1,Michael,"You see, in The Good Place, every person gets to live in a home that perfectly matches his or her true essence."
+1,1,Eleanor Shellstrop,Cool.
+1,1,Eleanor Shellstrop,"So I guess that's why my house, for example, is this adorable little cottage, whereas other people might have homes that are bigger, like that one."
+1,1,Michael,Exactly.
+1,1,Michael,"Oh, I'm so happy you get it."
+1,1,Michael,"As you can see, the interior has been decorated just as you like it, in the Icelandic primitive style."
+1,1,Michael,"Oh, oh, and, uh, of course, you love clowns, so"
+1,1,Eleanor Shellstrop,I do love clowns.
+1,1,Michael,"Now, let me show you the, uh, the video system here."
+1,1,Michael,You can review everything that happened in your life from your point of view.
+1,1,Michael,There we go.
+1,1,Michael,This is your human rights mission to Ukraine.
+1,1,Michael,"I mean, you got a ton of points for that one."
+1,1,Michael,It really put you over the top.
+1,1,Michael,Oh.
+1,1,Michael,"Chidi, come on in."
+1,1,Chidi Anagonye,Eleanor?
+1,1,Chidi Anagonye,"I'm Chidi Anagonye, and you are my soulmate."
+1,1,Eleanor Shellstrop,Cool!
+1,1,Eleanor Shellstrop,"Bring it in, man."
+1,1,Michael,"Now, excuse me."
+1,1,Michael,I have other people to attend to.
+1,1,Eleanor Shellstrop,"So where you from, Chidi?"
+1,1,Chidi Anagonye,"Well, I was born in Nigeria, raised in Senegal, but my work took me all over the place."
+1,1,Chidi Anagonye,"Australia, Hong Kong, Paris."
+1,1,Chidi Anagonye,What about you?
+1,1,Eleanor Shellstrop,"Uh, well, I I was born in Phoenix."
+1,1,Chidi Anagonye,Mmm-hmm.
+1,1,Eleanor Shellstrop,Arizona.
+1,1,Eleanor Shellstrop,"And then I went to school in Tempe, Arizona."
+1,1,Eleanor Shellstrop,"And then I moved back to Phoenix, Arizona."
+1,1,Eleanor Shellstrop,Your English is amazing.
+1,1,Chidi Anagonye,Oh!
+1,1,Chidi Anagonye,I'm actually speaking French.
+1,1,Chidi Anagonye,This place just translates whatever you say into a language the other person can understand.
+1,1,Chidi Anagonye,So it's incredible.
+1,1,Eleanor Shellstrop,Whoa.
+1,1,Chidi Anagonye,And now I want to say this.
+1,1,Eleanor Shellstrop,Mmm-kay.
+1,1,Chidi Anagonye,Eleanor.
+1,1,Chidi Anagonye,I have spent my entire life in pursuit of fundamental truths about the universe.
+1,1,Chidi Anagonye,And now we can actually learn about them together as soulmates.
+1,1,Chidi Anagonye,It's overwhelming.
+1,1,Eleanor Shellstrop,Chidi.
+1,1,Eleanor Shellstrop,"You'll stand by my side no matter what, right?"
+1,1,Chidi Anagonye,Of course I will.
+1,1,Eleanor Shellstrop,Promise me.
+1,1,Eleanor Shellstrop,"Say, ""I promise I will never betray you for any reason."""
+1,1,Chidi Anagonye,"Eleanor, I swear that I will never say or do anything to cause you any harm."
+1,1,Eleanor Shellstrop,Good.
+1,1,Eleanor Shellstrop,Because those aren't my memories.
+1,1,Eleanor Shellstrop,I wasn't a lawyer.
+1,1,Eleanor Shellstrop,I never went to the Ukraine.
+1,1,Eleanor Shellstrop,I hate clowns.
+1,1,Eleanor Shellstrop,There's been a big mistake.
+1,1,Eleanor Shellstrop,I'm not supposed to be here.
+1,1,Chidi Anagonye,"Wait, what?"
+1,1,Chidi Anagonye,Are you sure this isn't you?
+1,1,Eleanor Shellstrop,"Yeah, man, I'm pretty sure I wasn't a death-row lawyer who collected clown paintings and rescued orphans."
+1,1,Eleanor Shellstrop,"They got my name right, but nothing else."
+1,1,Eleanor Shellstrop,"I mean, somebody royally forked up."
+1,1,Eleanor Shellstrop,Somebody forked up.
+1,1,Eleanor Shellstrop,"Why can't I say ""fork""?"
+1,1,Chidi Anagonye,"If you're trying to curse, you can't here."
+1,1,Chidi Anagonye,"I guess a lot of people in this neighborhood don't like it, so it's prohibited."
+1,1,Eleanor Shellstrop,That's bull-shirt.
+1,1,Chidi Anagonye,"So, if you're not this person, then who are you?"
+1,1,Chidi Anagonye,What did you do for a living?
+1,1,Eleanor Shellstrop,I was in sales.
+1,1,Wallace,"So we sell two products here, NasaPRO and NasaPRO Silver."
+1,1,Wallace,We aim this at seniors.
+1,1,Wallace,"Now, you can't legally call it ""medicine"" because it doesn't technically work and it is technically chalk, so what you're gonna want to do --"
+1,1,Eleanor Shellstrop,You need me to lie to old people and scare them into buying fake medicine.
+1,1,Eleanor Shellstrop,"I get it, man."
+1,1,Eleanor Shellstrop,Which one's my desk?
+1,1,Chidi Anagonye,So your job was to defraud the elderly
+1,1,Chidi Anagonye,"Sorry, the sick and elderly?"
+1,1,Eleanor Shellstrop,But I was very good at it.
+1,1,Eleanor Shellstrop,I was the top salesperson five years running.
+1,1,Chidi Anagonye,"Okay, but that's worse."
+1,1,Chidi Anagonye,"I mean, you, you do get how that's worse, right?"
+1,1,Chidi Anagonye,"You know, maybe it's a test."
+1,1,Chidi Anagonye,"Maybe if you go to Michael and you tell him the truth, you'll pass the test and you'll get to stay."
+1,1,Eleanor Shellstrop,No way.
+1,1,Eleanor Shellstrop,I can't risk going to The Bad Place.
+1,1,Chidi Anagonye,"Okay, well, maybe it's not actually, like, all that bad."
+1,1,Chidi Anagonye,Let's just get some information first.
+1,1,Chidi Anagonye,We'll ask Janet.
+1,1,Chidi Anagonye,"Hey, Janet?"
+1,1,Janet,Hi there.
+1,1,Janet,How can I help you?
+1,1,Eleanor Shellstrop,What the fork?
+1,1,Eleanor Shellstrop,Who are you?
+1,1,Janet,I'm Janet.
+1,1,Janet,I'm the informational assistant here in The Good Place.
+1,1,Chidi Anagonye,She's like this walking database.
+1,1,Chidi Anagonye,"You can ask her about the creation of the universe, or history --"
+1,1,Eleanor Shellstrop,"Oh, there was a guy who lived in Avondale, Arizona, around 2002."
+1,1,Eleanor Shellstrop,His name was Kevin Paltonic.
+1,1,Eleanor Shellstrop,Is he gay?
+1,1,Janet,No.
+1,1,Eleanor Shellstrop,Really?
+1,1,Eleanor Shellstrop,Huh.
+1,1,Eleanor Shellstrop,I guess he just didn't want to have sex with me.
+1,1,Janet,That's correct.
+1,1,Eleanor Shellstrop,"Well, that's fine, I wasn't that into him anyway."
+1,1,Janet,"Yes, you were."
+1,1,Chidi Anagonye,"Okay, Janet, I have a question."
+1,1,Janet,Okay.
+1,1,Chidi Anagonye,What is The Bad Place like?
+1,1,Janet,"Oh, sorry, that is the one topic I'm not allowed to tell you about."
+1,1,Janet,I can only play you a brief audio clip of what is happening there right now.
+1,1,Chidi Anagonye,Okay.
+1,1,Woman,The bear has two mouths!
+1,1,Eleanor Shellstrop,"Well, it doesn't sound awesome."
+1,1,Eleanor Shellstrop,Does everyone have a huge house except me?
+1,1,Eleanor Shellstrop,"All right, we need a plan."
+1,1,Eleanor Shellstrop,I say we just lie low and hope that they don't notice me.
+1,1,Chidi Anagonye,"I'm sorry, I don't think I can help you."
+1,1,Chidi Anagonye,"I just don't like being dishonest, and I can't advise you to be dishonest either."
+1,1,Eleanor Shellstrop,"Come on, I'm just asking you to fudge a little bit."
+1,1,Eleanor Shellstrop,You must've told a few white lies in your life.
+1,1,Eleanor Shellstrop,"I mean, what was your job?"
+1,1,Chidi Anagonye,I was a professor of ethics and moral philosophy.
+1,1,Eleanor Shellstrop,Mother-forker!
+1,1,Chidi Anagonye,I'm getting a stomachache.
+1,1,Chidi Anagonye,"I'm in a perfect utopia, and I'm I have a stomachache."
+1,1,Chidi Anagonye,This is awful.
+1,1,Chidi Anagonye,"I, uh I think I have to tell Michael about this."
+1,1,Michael,Tell Michael about what?
+1,1,Eleanor Shellstrop,Michael?
+1,1,Eleanor Shellstrop,Hi.
+1,1,Eleanor Shellstrop,What have you been up to?
+1,1,Michael,"Eleanor, Chidi, I would like you to meet Tahani and Jianyu."
+1,1,Michael,They are soulmates and your next-door neighbors.
+1,1,Tahani Al-Jamil,Hello.
+1,1,Tahani Al-Jamil,Can I just say I love your house?
+1,1,Tahani Al-Jamil,It's just so tiny and cute.
+1,1,Tahani Al-Jamil,"It's like a little child's plaything, like for a family of mice or for a very fancy little dog."
+1,1,Tahani Al-Jamil,I love it.
+1,1,Tahani Al-Jamil,It's just so sweet and teensy.
+1,1,Tahani Al-Jamil,Just like you.
+1,1,Tahani Al-Jamil,Boop.
+1,1,Eleanor Shellstrop,Oh!
+1,1,Michael,Oh!
+1,1,Eleanor Shellstrop,You booped me.
+1,1,Tahani Al-Jamil,I did.
+1,1,Eleanor Shellstrop,That's fun.
+1,1,Michael,"Tahani and Jianyu are having a little welcome party tonight, and they've invited the entire neighborhood."
+1,1,Tahani Al-Jamil,"Oh, I simply adore entertaining."
+1,1,Tahani Al-Jamil,"Don't I just adore it, Jianyu?"
+1,1,Tahani Al-Jamil,"Oh, yes, by the way, Jianyu here is a Buddhist monk, you see, and he obeys a strict code of silence."
+1,1,Tahani Al-Jamil,"So when you see him smiling and nodding, that's actually his way of jumping up and down with glee."
+1,1,Tahani Al-Jamil,"Isn't that right, darling?"
+1,1,Tahani Al-Jamil,So we'll see you tonight?
+1,1,Eleanor Shellstrop,Great.
+1,1,Chidi Anagonye,Yes.
+1,1,Eleanor Shellstrop,No way.
+1,1,Eleanor Shellstrop,My entire house could fit in this room.
+1,1,Chidi Anagonye,"Okay, uh help me out here."
+1,1,Chidi Anagonye,"Tell me one good thing that you did on Earth, just one truly kind and decent act so that I can feel better about helping you out."
+1,1,Eleanor Shellstrop,Uh
+1,1,Chidi Anagonye,Let's forget about good.
+1,1,Chidi Anagonye,"Um, just tell me something neutral about yourself."
+1,1,Chidi Anagonye,"Like, tell me about the day before you died."
+1,1,Chidi Anagonye,What do you remember?
+1,1,Joe,Hi there.
+1,1,Joe,Do you have a second to talk about the environment?
+1,1,Eleanor Shellstrop,Do you have a second to eat my farts?
+1,1,Joe,You missed.
+1,1,Eleanor Shellstrop,Pick it up if you're so horny for the environment.
+1,1,Eleanor Shellstrop,I don't remember anything specific.
+1,1,Chidi Anagonye,Oh
+1,1,Eleanor Shellstrop,Look.
+1,1,Eleanor Shellstrop,"I might not have been a saint, but it's not like I killed anybody."
+1,1,Eleanor Shellstrop,I wasn't an arsonist.
+1,1,Eleanor Shellstrop,I never found a wallet outside of an IHOP and thought about returning it but saw the owner lived out of state so just took the cash and dropped the wallet back on the ground.
+1,1,Chidi Anagonye,"Okay, that's really specific, and that makes me think that you definitely did do that."
+1,1,Eleanor Shellstrop,"All I'm saying is these people might be ""good"", but are they really that much better than me?"
+1,1,Bambadjan,"Well, I spent half my life in North Korea fighting for women's rights and the other half in Saudi Arabia fighting for gay rights."
+1,1,Gloria,"So we said, ""If the UN won't remove those land mines, we will."""
+1,1,Gloria,And we dug up over a thousand unexploded land mines from the area surrounding the orphanage.
+1,1,Sachveer,"Well, then he said, ""You can't give me both your kidneys, you'll die."""
+1,1,Sachveer,"And I said, ""But you will live."""
+1,1,Sachveer,"And I know we just met on this bus ten minutes ago, but he seemed nice."
+1,1,Eleanor Shellstrop,"Oh, forget it."
+1,1,Eleanor Shellstrop,Heading to the bar!
+1,1,Michael,"Thank you, thank you."
+1,1,Michael,You all know that I am the architect of this neighborhood.
+1,1,Michael,But what you don't know is
+1,1,Michael,"Golly, I'm not supposed to tell you this, but, um"
+1,1,Michael,"Oh, what the heck?"
+1,1,Michael,This is actually the very first neighborhood that I have ever designed.
+1,1,Michael,"I have been an apprentice for over 200 years, and my boss has finally given me my first solo project."
+1,1,Michael,Yes!
+1,1,Eleanor Shellstrop,"Ah, ah, ah."
+1,1,Eleanor Shellstrop,"Hold on there, ace."
+1,1,Eleanor Shellstrop,Let me get more of them shrampies.
+1,1,Chidi Anagonye,"Okay, easy."
+1,1,Eleanor Shellstrop,What?
+1,1,Eleanor Shellstrop,"They're for everybody, right?"
+1,1,Chidi Anagonye,"Yes, exactly."
+1,1,Michael,And you deserve a perfect world because every single one of you is a good person.
+1,1,Michael,That's it for me.
+1,1,Michael,"Back to you, Tahani."
+1,1,Tahani Al-Jamil,"Bravo, Michael, bravo!"
+1,1,Michael,Thank you.
+1,1,Tahani Al-Jamil,"And I would just like to quickly say if any of you would like to play tennis tonight, we have 36 regulation grass tennis courts."
+1,1,Tahani Al-Jamil,Such fun.
+1,1,Tahani Al-Jamil,Cheers.
+1,1,Eleanor Shellstrop,"Tahani, what a condescending bench."
+1,1,Chidi Anagonye,"Okay, okay, okay, okay."
+1,1,Eleanor Shellstrop,Am I right?
+1,1,Eleanor Shellstrop,"Why does she still have that British accent, right?"
+1,1,Eleanor Shellstrop,No one else here has an accent.
+1,1,Eleanor Shellstrop,She's choosing to have that accent.
+1,1,Eleanor Shellstrop,"""Oh, hello."
+1,1,Eleanor Shellstrop,"I am just a big, beautiful, utterly perfect cartoon giraffe."""
+1,1,Chidi Anagonye,"Oh, okay."
+1,1,Chidi Anagonye,Okay.
+1,1,Chidi Anagonye,I think it's time to go home.
+1,1,Eleanor Shellstrop,"Wait, wait, wait."
+1,1,Eleanor Shellstrop,I just have to go upstairs real quick and steal a bunch of gold stuff.
+1,1,Chidi Anagonye,"Okay, don't do that."
+1,1,Chidi Anagonye,"Don't do no, Eleanor, Eleanor, Eleanor."
+1,1,Eleanor Shellstrop,"Hello, creepy house that I hate."
+1,1,Eleanor Shellstrop,"Hello, one million clowns."
+1,1,Eleanor Shellstrop,Why aren't there stairs here?
+1,1,Eleanor Shellstrop,What kind of weirdo house is this?
+1,1,Eleanor Shellstrop,Ooh.
+1,1,Chidi Anagonye,Did you fill your bra with shrimp?
+1,1,Eleanor Shellstrop,No.
+1,1,Eleanor Shellstrop,Yes.
+1,1,Eleanor Shellstrop,"Whatever, it's freakin' heaven."
+1,1,Eleanor Shellstrop,I'm sure they have plenty of shellfish.
+1,1,Eleanor Shellstrop,"That Tahani is a real butthead, huh?"
+1,1,Eleanor Shellstrop,Hey.
+1,1,Eleanor Shellstrop,"At least I can still say ""butthead""."
+1,1,Eleanor Shellstrop,"Oh, she is a butthead."
+1,1,Chidi Anagonye,Found some pajamas.
+1,1,Eleanor Shellstrop,"Chidi Chidi, Chidi?"
+1,1,Eleanor Shellstrop,I'm sorry that you had to deal with this
+1,1,Chidi Anagonye,It's okay.
+1,1,Eleanor Shellstrop,"It's not, though."
+1,1,Eleanor Shellstrop,Do you think anybody cared that I died?
+1,1,Eleanor Shellstrop,Maybe someone did.
+1,1,Eleanor Shellstrop,I don't know.
+1,1,Eleanor Shellstrop,I was an only child.
+1,1,Eleanor Shellstrop,My parents were divorced when I was a kid.
+1,1,Eleanor Shellstrop,"They were both crummy people, so they're probably in The Bad Place."
+1,1,Eleanor Shellstrop,Maybe they're being used to torture each other.
+1,1,Eleanor Shellstrop,It would work.
+1,1,Eleanor Shellstrop,I bet way more people cared that you died.
+1,1,Eleanor Shellstrop,Cause you're a nice person.
+1,1,Eleanor Shellstrop,"You're a nice person, Chidi Anaconda."
+1,1,Chidi Anagonye,"""Anagonye""."
+1,1,Eleanor Shellstrop,Aganocomonga.
+1,1,Chidi Anagonye,"""Anagonye""."
+1,1,Eleanor Shellstrop,Ags say it again.
+1,1,Chidi Anagonye,"""Anagonye""."
+1,1,Eleanor Shellstrop,"No, say what you said before."
+1,1,Chidi Anagonye,I did.
+1,1,Chidi Anagonye,It's Anagonye.
+1,1,Eleanor Shellstrop,You just changed it.
+1,1,Chidi Anagonye,"I didn't change it, it's my name."
+1,1,Eleanor Shellstrop,Argrugande.
+1,1,Eleanor Shellstrop,Ariana Grande.
+1,1,Eleanor Shellstrop,That's a person.
+1,1,Eleanor Shellstrop,I did it.
+1,1,Eleanor Shellstrop,Good night.
+1,1,Chidi Anagonye,Good night.
+1,1,Chidi Anagonye,"Well, that's terrifying."
+1,1,Eleanor Shellstrop,That can't be good.
+1,1,Eleanor Shellstrop,"Oh, fork."
+1,1,Tahani Al-Jamil,Michael.
+1,1,Michael,Hmm?
+1,1,Tahani Al-Jamil,"Is that giant, terrifying ladybug supposed to be there?"
+1,1,Michael,Ah.
+1,1,Michael,"Well, great question, Tahani."
+1,1,Michael,No.
+1,1,Michael,"No, it's not."
+1,1,Michael,I have no idea why any of this is happening or how to control it.
+1,1,Tahani Al-Jamil,Should we run away then?
+1,1,Michael,Yes.
+1,1,Tahani Al-Jamil,Righto.
+1,1,Eleanor Shellstrop,"Chidi, Chidi!"
+1,1,Eleanor Shellstrop,What's going on?
+1,1,Eleanor Shellstrop,Why are there giant animals everywhere?
+1,1,Eleanor Shellstrop,Do you hear Ariana Grande playing?
+1,1,Eleanor Shellstrop,Why is everyone wearing blue and yellow?
+1,1,Chidi Anagonye,You're not.
+1,1,Chidi Anagonye,You're the only one who's not.
+1,1,Chidi Anagonye,"Eleanor, this is all happening because of you."
+1,1,Eleanor Shellstrop,"Oh, fork me."
+1,1,Eleanor Shellstrop,"Okay, okay."
+1,1,Eleanor Shellstrop,We don't know this is because of me.
+1,1,Chidi Anagonye,"Eleanor, this place is a perfectly made Swiss watch, and you are a wrench in the gears."
+1,1,Chidi Anagonye,"Actually, you're a hammer, just smashing the gears into dust."
+1,1,Eleanor Shellstrop,"Oh, hang on."
+1,1,Eleanor Shellstrop,"Not everybody here is perfect, okay?"
+1,1,Eleanor Shellstrop,Tahani is totally condescending.
+1,1,Eleanor Shellstrop,"And there are a couple of, you know, chunksters."
+1,1,Chidi Anagonye,"Oh, come on!"
+1,1,Eleanor Shellstrop,No judgment.
+1,1,Eleanor Shellstrop,I'm just saying I'm not the only one with flaws.
+1,1,Eleanor Shellstrop,So how can we be sure this is my fault?
+1,1,Chidi Anagonye,"You hogged all the shrimp, and now there are shrimp flying around."
+1,1,Chidi Anagonye,"You called Tahani a giraffe, and now there are giraffes everywhere."
+1,1,Eleanor Shellstrop,"Okay, fine, turns out there are many ways to know that it was me."
+1,1,Chidi Anagonye,"Let's just face it, Eleanor, you don't belong here."
+1,1,Eleanor Shellstrop,"Well, then this system sucks."
+1,1,Eleanor Shellstrop,"What, one in a million gets to live in paradise and everyone else is tortured for eternity?"
+1,1,Eleanor Shellstrop,Come on.
+1,1,Eleanor Shellstrop,"I mean, I wasn't freaking Gandhi, but I was okay."
+1,1,Eleanor Shellstrop,I was a medium person.
+1,1,Eleanor Shellstrop,I should get to spend eternity in a medium place!
+1,1,Eleanor Shellstrop,Like Cincinnati.
+1,1,Eleanor Shellstrop,Everyone who wasn't perfect but wasn't terrible should get to spend eternity in Cincinnati.
+1,1,Chidi Anagonye,"Look, apparently it doesn't work that way."
+1,1,Chidi Anagonye,"I'm sorry, Eleanor, but there's nothing anyone can do."
+1,1,Eleanor Shellstrop,Unless there is something we can do.
+1,1,Eleanor Shellstrop,Unless you could teach me.
+1,1,Chidi Anagonye,Teach you what?
+1,1,Eleanor Shellstrop,How to be good.
+1,1,Eleanor Shellstrop,"That was your job, right?"
+1,1,Eleanor Shellstrop,A professor of ethics?
+1,1,Eleanor Shellstrop,No one knew I was a problem when I arrived.
+1,1,Eleanor Shellstrop,Things only started getting crazy after I was an ash-hole to everyone at the party.
+1,1,Eleanor Shellstrop,Ugh.
+1,1,Eleanor Shellstrop,"You know I'm trying to say ""ash-hole"" and not ""ash-hole"", right?"
+1,1,Chidi Anagonye,"I got that, yes."
+1,1,Eleanor Shellstrop,"Okay, give me a chance."
+1,1,Eleanor Shellstrop,Let me earn my place here.
+1,1,Eleanor Shellstrop,Let me be your ethical guinea pig.
+1,1,Michael,"Hey, guys!"
+1,1,Michael,"Uh emergency neighborhood meeting, now!"
+1,1,Eleanor Shellstrop,"We'll be right there, Michael!"
+1,1,Eleanor Shellstrop,"If I walk out of here in these clothes, I'm toast."
+1,1,Eleanor Shellstrop,"My soul is in your hands, soulmate."
+1,1,Eleanor Shellstrop,What's it gonna be?
+1,1,Chidi Anagonye,"Oh, stomachache."
+1,2,Chidi Anagonye,I don't know what to do here.
+1,2,Chidi Anagonye,This is a mess.
+1,2,Chidi Anagonye,"Morally speaking, this is a putrid, disgusting bowl of ethical soup."
+1,2,Eleanor Shellstrop,"Okay, well, how about we just chill and go to the town meeting and talk it out after?"
+1,2,Eleanor Shellstrop,Great.
+1,2,Eleanor Shellstrop,"Hey, how do I make that helper woman show up?"
+1,2,Eleanor Shellstrop,Hello?
+1,2,Eleanor Shellstrop,Front desk lady?
+1,2,Eleanor Shellstrop,Magical slave robot?
+1,2,Chidi Anagonye,"Excuse me, Janet?"
+1,2,Janet,"Hi, there."
+1,2,Eleanor Shellstrop,Still not used to it.
+1,2,Eleanor Shellstrop,"Um, Janet, I need"
+1,2,Eleanor Shellstrop,"Quick question, can anyone access our search history, or is this an incognito browsing situation like when you're stalking a hot mailman from your work computer?"
+1,2,Janet,It is 100% confidential.
+1,2,Janet,"No one can access what you ask me, including Michael."
+1,2,Janet,"Now, what kind of pornography would you like to see?"
+1,2,Eleanor Shellstrop,No.
+1,2,Eleanor Shellstrop,"No, no, no, not porn."
+1,2,Eleanor Shellstrop,"I, um I need clothes, like yours and Chidi's with the stripes."
+1,2,Janet,There you go.
+1,2,Michael,"Everybody, everybody!"
+1,2,Michael,"Gather round, please, thank you, thank you."
+1,2,Michael,"Obviously, there's something very wrong with this neighborhood."
+1,2,Michael,"We don't know what it is, how long it will last, or what caused it."
+1,2,Michael,"What do we know, Janet?"
+1,2,Janet,We know where it happened.
+1,2,Janet,Here.
+1,2,Michael,"Yes, thank you, Janet."
+1,2,Michael,The chaos happened here.
+1,2,Michael,"See, that's the trouble with these perfect systems."
+1,2,Michael,One little flaw can lead to
+1,2,Michael,"Well, it can lead to Gary over there."
+1,2,Gary,"Hey, Gary."
+1,2,Michael,"Hang in there, buddy."
+1,2,Michael,"Boy, my armpits are leaking."
+1,2,Michael,What is that called again?
+1,2,Janet,Sweat.
+1,2,Michael,"Right, right."
+1,2,Michael,Still not used to being in a human body.
+1,2,Michael,And what do you do with sweat?
+1,2,Michael,"Do you lick it away, is that right?"
+1,2,Janet,"No, you dab it with a cloth."
+1,2,Michael,"Oh, right."
+1,2,Michael,And then you lick the cloth?
+1,2,Michael,That seems weirder.
+1,2,Tahani Al-Jamil,Michael.
+1,2,Tahani Al-Jamil,Look!
+1,2,Michael,Okay.
+1,2,Michael,That's a good sign.
+1,2,Michael,It could mean that this is almost over.
+1,2,Tahani Al-Jamil,"Oh, such a relief."
+1,2,Tahani Al-Jamil,"That was my first time as a fashion ""don't"", and I did not care for it."
+1,2,Eleanor Shellstrop,"Okay, things are settling down outside."
+1,2,Eleanor Shellstrop,"I think it's time to make me good, partner."
+1,2,Eleanor Shellstrop,How do we do it?
+1,2,Eleanor Shellstrop,Is there a pill I can take or something I could vape?
+1,2,Eleanor Shellstrop,Where did you get a chalkboard?
+1,2,Chidi Anagonye,"It's The Good Place, you can get anything you want at any time."
+1,2,Eleanor Shellstrop,And you chose a chalkboard?
+1,2,Eleanor Shellstrop,What are you reading?
+1,2,Chidi Anagonye,The Metaphysics of Morals by Immanuel Kant.
+1,2,Chidi Anagonye,It's a treatise on the aesthetic preconditions of the mind's receptivity to duty.
+1,2,Chidi Anagonye,It's a book on how to act good.
+1,2,Eleanor Shellstrop,"Oh, great!"
+1,2,Eleanor Shellstrop,So you've decided to help me?
+1,2,Chidi Anagonye,I don't know.
+1,2,Chidi Anagonye,There's a thousand questions.
+1,2,Chidi Anagonye,Is there a moral imperative to help you?
+1,2,Eleanor Shellstrop,Hmm.
+1,2,Chidi Anagonye,Do I have a greater obligation to my community?
+1,2,Chidi Anagonye,"Are you taking someone else's spot, someone who deserves to be here?"
+1,2,Eleanor Shellstrop,Ooh!
+1,2,Eleanor Shellstrop,"On that question, I honestly think I was just put here by mistake."
+1,2,Eleanor Shellstrop,"Because Michael called me Eleanor Shellstrop, so he knows I'm me."
+1,2,Eleanor Shellstrop,"He's just wrong about my overall ""quality"" level."
+1,2,Eleanor Shellstrop,"Please, help me, man."
+1,2,Eleanor Shellstrop,I swear I am worth it.
+1,2,Chidi Anagonye,Tell me one fact that you know about me.
+1,2,Chidi Anagonye,"I mean, we spent the whole day together."
+1,2,Chidi Anagonye,You must remember something.
+1,2,Chidi Anagonye,What country am I from?
+1,2,Eleanor Shellstrop,Is it racist if I say Africa?
+1,2,Chidi Anagonye,"Yes, and Africa is not a country."
+1,2,Chidi Anagonye,I am from Senegal.
+1,2,Chidi Anagonye,Do I have any siblings?
+1,2,Chidi Anagonye,Where did I go to college?
+1,2,Eleanor Shellstrop,Trick question.
+1,2,Eleanor Shellstrop,You didn't.
+1,2,Chidi Anagonye,I was literally a college professor.
+1,2,Chidi Anagonye,Do you not remember one single thing about me?
+1,2,Eleanor Shellstrop,"Dude, things have been nuts around here."
+1,2,Eleanor Shellstrop,I bet you don't know anything about me.
+1,2,Chidi Anagonye,You were born in Phoenix.
+1,2,Chidi Anagonye,You went to school in Tempe.
+1,2,Chidi Anagonye,You're an only child.
+1,2,Chidi Anagonye,"Your favorite show is something called The Real Housewives of Atlanta, and your favorite book is Kendall Jenner's Instagram feed."
+1,2,Eleanor Shellstrop,How did you know all that?
+1,2,Chidi Anagonye,Because you are constantly talking about yourself.
+1,2,Chidi Anagonye,You are the most self-obsessed person I have ever met.
+1,2,Eleanor Shellstrop,You should see Kendall Jenner's Instagram feed.
+1,2,Chidi Anagonye,"Okay, this is my fear about you, Eleanor."
+1,2,Chidi Anagonye,You are too selfish to ever be a good person.
+1,2,Eleanor Shellstrop,"Well, I think you're wrong."
+1,2,Chidi Anagonye,"What country am I from, again?"
+1,2,Eleanor Shellstrop,Sensodyne.
+1,2,Chidi Anagonye,That is a brand of toothpaste.
+1,2,Chidi Anagonye,"Look, the only thing that you are concerned with is your own happiness."
+1,2,Chidi Anagonye,That's your problem.
+1,2,Eleanor Shellstrop,"Okay, names in the hat."
+1,2,Eleanor Shellstrop,Time to pick a designated driver.
+1,2,Eleanor Shellstrop,And the loser is Betsy.
+1,2,Betsy,"Wait, you never get picked, and you're always the one who draws the name."
+1,2,Betsy,Let me see that.
+1,2,Eleanor Shellstrop,There's no need.
+1,2,Eleanor Shellstrop,"Everyone here believes in my integrity 100%, right, guys?"
+1,2,Betsy,Give it to me.
+1,2,Eleanor Shellstrop,"For the record I did that out of principle, because it absolutely had your name on it."
+1,2,Betsy,"If I check the other ones, I can figure it out by process of elimination."
+1,2,Eleanor Shellstrop,"Again, out of principle."
+1,2,Eleanor Shellstrop,"Let it wash over you, Betsy."
+1,2,Eleanor Shellstrop,This is what integrity looks like.
+1,2,Michael,"All right, everyone, let's get started."
+1,2,Michael,Things have settled down.
+1,2,Michael,Phew!
+1,2,Michael,"So hopefully, we're off and running."
+1,2,Michael,"Welcome to orientation, day two."
+1,2,Michael,"Now, today we're gonna start with something that everyone has always wanted to do."
+1,2,Michael,Flying.
+1,2,Michael,"Now that you're dead, let's live a little, right?"
+1,2,Tahani Al-Jamil,"Uh, sorry."
+1,2,Tahani Al-Jamil,"Uh, Michael?"
+1,2,Tahani Al-Jamil,If if I might?
+1,2,Tahani Al-Jamil,"I was just thinking, earlier today in all of the chaos, large swaths of this neighborhood were destroyed."
+1,2,Tahani Al-Jamil,We thought perhaps some of us could volunteer to help clean up the debris.
+1,2,Tahani Al-Jamil,"You know, it's quite a fun way to band together as a community, isn't that right, Jianyu?"
+1,2,Tahani Al-Jamil,"Oh, uh, yeah, sorry."
+1,2,Tahani Al-Jamil,"For those of you who don't know, my soulmate, Jianyu here, is a Buddhist monk."
+1,2,Tahani Al-Jamil,"He took a vow of silence that he's still observing, even here, in The Good Place."
+1,2,Tahani Al-Jamil,It's truly inspiring.
+1,2,Michael,"Well, Tahani, it's not really your job to clean up, but I suppose there's no harm if you really want to."
+1,2,Tahani Al-Jamil,"Oh, well, hurrah."
+1,2,Tahani Al-Jamil,"We need about, uh, 12 volunteers."
+1,2,Michael,Oh!
+1,2,Eleanor Shellstrop,I can't believe all these people are passing on flying to pick up garbage all day.
+1,2,Eleanor Shellstrop,"Have fun, nerds."
+1,2,Eleanor Shellstrop,I'll be soaring through the air like a forkin' bird.
+1,2,Chidi Anagonye,Eleanor and I would love to help.
+1,2,Tahani Al-Jamil,Ah.
+1,2,Tahani Al-Jamil,"Hurrah, hurrah."
+1,2,Tahani Al-Jamil,Yay.
+1,2,Eleanor Shellstrop,Dude.
+1,2,Chidi Anagonye,You want to prove you're not selfish?
+1,2,Chidi Anagonye,Here's the perfect test.
+1,2,Chidi Anagonye,"There's something fun that you want to do, and then there's something less fun that people are doing for the common good."
+1,2,Chidi Anagonye,Which do you choose?
+1,2,Janet,Have fun.
+1,2,Man 1,Hey!
+1,2,Man 2,"Oh, hey!"
+1,2,Man 3,"Aw, yeah!"
+1,2,Man 4,All right!
+1,2,Jessica,Whoo!
+1,2,Eleanor Shellstrop,"Hey, up there."
+1,2,Eleanor Shellstrop,"Having fun, or does it maybe suck, probably?"
+1,2,Jessica,"Well, I wouldn't call it fun."
+1,2,Jessica,"I'd say it's like 50 million simultaneous orgasms, but better."
+1,2,Jessica,How's volunteer garbage pickup?
+1,2,Eleanor Shellstrop,About the same.
+1,2,Jessica,Great!
+1,2,Jessica,Whee!
+1,2,Tahani Al-Jamil,"You know, this really reminds me of my time in Vietnam, picking up mortar shells with my godmother, Diana."
+1,2,Tahani Al-Jamil,Doesn't really matter of what she's a princess of.
+1,2,Tahani Al-Jamil,It's not really important.
+1,2,Michael,Tahani!
+1,2,Michael,How goes the cleaning?
+1,2,Tahani Al-Jamil,"Oh, swimmingly, Michael."
+1,2,Tahani Al-Jamil,"And I have to say this neighborhood that you've built is truly a masterpiece, the likes of which I've never seen."
+1,2,Tahani Al-Jamil,And I've been to Johnny Depp's private bird sanctuary.
+1,2,Michael,"Well, thank you."
+1,2,Michael,That's very kind of you to say.
+1,2,Michael,But it's also dead wrong.
+1,2,Michael,This neighborhood is a disaster.
+1,2,Michael,"See, I must have made a mistake somewhere."
+1,2,Michael,"And it led to all this chaos, and now I'm just I'm just terrified that it's gonna happen again."
+1,2,Michael,"I'm trying to put a good face on uh, well, this face that I've constructed for myself."
+1,2,Michael,"But the truth is, I I'm just miserable."
+1,2,Michael,I have to go.
+1,2,Michael,Thank you so much for your service.
+1,2,Tahani Al-Jamil,"Oh, no."
+1,2,Tahani Al-Jamil,Powerful people do not handle failure well.
+1,2,Tahani Al-Jamil,Michael could be heading for a total meltdown.
+1,2,Tahani Al-Jamil,"Soulmate, are you thinking what I'm thinking?"
+1,2,Tahani Al-Jamil,Should we say it at the same time?
+1,2,Tahani Al-Jamil,All right.
+1,2,Tahani Al-Jamil,"One, two, three."
+1,2,Tahani Al-Jamil,We must help Michael.
+1,2,Tahani Al-Jamil,"Oh, you sly devil."
+1,2,Tahani Al-Jamil,"You're going to keep me on my toes, aren't you?"
+1,2,Tahani Al-Jamil,"All right, come on."
+1,2,Tahani Al-Jamil,Let's go.
+1,2,Antonio,"Oh, boy!"
+1,2,Eleanor Shellstrop,"Hey, Gunnar! Hey, Antonio!"
+1,2,Gunnar,"Hey, Eleanor. Isn't this great?"
+1,2,Eleanor Shellstrop,"Uh, yeah."
+1,2,Eleanor Shellstrop,"When I thought of the afterlife, I totally pictured being an unpaid, non-flying janitor."
+1,2,Antonio,"Us, too!"
+1,2,Eleanor Shellstrop,You guys are so fun.
+1,2,Eleanor Shellstrop,Just relentlessly fun.
+1,2,Eleanor Shellstrop,"I keep thinking, ""When are they gonna stop being fun?"""
+1,2,Eleanor Shellstrop,And the answer is never.
+1,2,Eleanor Shellstrop,You're never gonna stop.
+1,2,Eleanor Shellstrop,"Well, I have had a pretty full day of being unselfish."
+1,2,Eleanor Shellstrop,I've made some new friends.
+1,2,Eleanor Shellstrop,My area's almost garbage-free.
+1,2,Eleanor Shellstrop,"So you're gonna help me figure out how to stay, right?"
+1,2,Chidi Anagonye,"Well, that is a really tough question."
+1,2,Chidi Anagonye,"Most great philosophers would say helping you is pointless, that you can't try to be good, especially when your motivations are so obviously corrupt."
+1,2,Eleanor Shellstrop,"Yeah, but what do most great philosophers know?"
+1,2,Chidi Anagonye,"On the other hand, Aristotle thought that moral virtue is something that you could get better at."
+1,2,Chidi Anagonye,He he compared it to playing the flute.
+1,2,Chidi Anagonye,"The more you practice, the more you improve."
+1,2,Eleanor Shellstrop,Aristotle!
+1,2,Eleanor Shellstrop,"That's my boy, right there."
+1,2,Eleanor Shellstrop,He was the best.
+1,2,Eleanor Shellstrop,"I mean, most people agree he was the best one."
+1,2,Eleanor Shellstrop,"So it sounds to me like you are onboard the ""Help Eleanor"" train."
+1,2,Chidi Anagonye,"Well, I've narrowed it down to two possibilities, yes and no."
+1,2,Eleanor Shellstrop,"Well, no worries."
+1,2,Eleanor Shellstrop,Just hit me up when you're done weighing my life in your hands.
+1,2,Eleanor Shellstrop,I'll just keep doing what I do best: being super considerate and selfless.
+1,2,Eleanor Shellstrop,"Hey, guys."
+1,2,Betsy,"Okay, Eleanor, reminder."
+1,2,Betsy,"We switched to a rotating system for choosing a designated driver, and it's your turn."
+1,2,Eleanor Shellstrop,Got it.
+1,2,Eleanor Shellstrop,"Full disclosure, I forgot we were doing this new system."
+1,2,Eleanor Shellstrop,I got off work early.
+1,2,Eleanor Shellstrop,"I've been here for about an hour, and I'm already pretty drunk."
+1,2,Betsy,Someone else will do it.
+1,2,Eleanor Shellstrop,Good call.
+1,2,Eleanor Shellstrop,Guess the only place I'll be driving is through the giant loophole in the system I accidentally discovered.
+1,2,Eleanor Shellstrop,Whoo!
+1,2,Tahani Al-Jamil,"I can't believe they've managed to mix one million flavors together, and yet, somehow, I can taste each individual one."
+1,2,Tahani Al-Jamil,It's remarkable.
+1,2,Michael,I got no-flavor.
+1,2,Michael,"It's all I deserve, really."
+1,2,Tahani Al-Jamil,No.
+1,2,Michael,"Look, I I appreciate you trying to cheer me up."
+1,2,Michael,"I really do, but you don't understand."
+1,2,Michael,This was the very first neighborhood that I got to design.
+1,2,Michael,"It was my chance to prove myself, and now I've blown it."
+1,2,Tahani Al-Jamil,"You know, sometimes a flaw can make something even more beautiful, like with Cindy Crawford and how short she is."
+1,2,Michael,"Oh, Tahani, if I made one tiny mistake in my design, if there's a single glitch in the system, if even one blade of grass is angled a fraction of a degree off the whole neighborhood is compromised."
+1,2,Michael,Whose dog is that?
+1,2,Michael,"Guys, whose dog is that?"
+1,2,Michael,Whose dog is that?
+1,2,Michael,"See, this is one of those glitches I was talking about."
+1,2,Michael,"Nice try, puppy!"
+1,2,Michael,Phew!
+1,2,Michael,That was a close one.
+1,2,Pevita,Teacup!
+1,2,Pevita,"Hey, have you seen my dog?"
+1,2,Eleanor Shellstrop,Shouldn't these be magical trash bags?
+1,2,Janet,"Five more minutes, flyers!"
+1,2,Janet,Five more minutes!
+1,2,Eleanor Shellstrop,"Oh, man, really?"
+1,2,Eleanor Shellstrop,"Janet, I'm finished with cleanup, and I'm ready to fly."
+1,2,Eleanor Shellstrop,How do I start?
+1,2,Janet,Hop on the launch pad and conjure an image that brings you pure joy.
+1,2,Janet,Some people think of their wedding day or favorite vacation spot.
+1,2,Eleanor Shellstrop,People puking on roller coasters.
+1,2,Eleanor Shellstrop,People puking on roller coasters.
+1,2,Eleanor Shellstrop,It's working!
+1,2,Eleanor Shellstrop,Ow!
+1,2,Eleanor Shellstrop,What the fork?
+1,2,Eleanor Shellstrop,"Janet, any chance this is a scheduled trash storm?"
+1,2,Michael,"So here's the situation, Pevita."
+1,2,Michael,I kind of kicked your dog into the sun.
+1,2,Michael,But I got her back.
+1,2,Michael,Everything everything seems fine.
+1,2,Pevita,"Teacup, thank goodness you're okay."
+1,2,Michael,"Everyone, it is merely a construct of a dog."
+1,2,Michael,It feels no pain or joy or love.
+1,2,Pevita,Teacup doesn't love me?
+1,2,Michael,Oh!
+1,2,Michael,"Oh, no, no, no, no, no, it definitely feels love."
+1,2,Michael,Do you actually want a dog that loves you a little bit more?
+1,2,Michael,Because I can kick her right back into the sun and get you another one just like that.
+1,2,Pevita,No!
+1,2,Michael,"Oh, boy."
+1,2,Michael,I'm making things worse.
+1,2,Tahani Al-Jamil,"Okay, all right, that's all right."
+1,2,Tahani Al-Jamil,Breathe.
+1,2,Tahani Al-Jamil,Breathe.
+1,2,Tahani Al-Jamil,Do you breathe?
+1,2,Tahani Al-Jamil,"If you do, then just breathe 'cause everything's fine, Michael, it's fine."
+1,2,Pevita,It's raining garbage.
+1,2,Pevita,Run!
+1,2,Michael,"No, no, no, I'm gonna run this way."
+1,2,Eleanor Shellstrop,Chidi!
+1,2,Eleanor Shellstrop,Hey.
+1,2,Eleanor Shellstrop,Before you say anything
+1,2,Eleanor Shellstrop,"That's it, I just don't want you to say anything."
+1,2,Chidi Anagonye,What did you do?
+1,2,Eleanor Shellstrop,Nothing!
+1,2,Eleanor Shellstrop,It just started raining trash out of nowhere for no reason at all.
+1,2,Eleanor Shellstrop,"Okay, fine, fine."
+1,2,Eleanor Shellstrop,"My bag broke, and I ditched the trash instead of taking it all the way to the dumpster."
+1,2,Eleanor Shellstrop,"But in my defense, there were only five minutes left in flying and I wanted to go flying."
+1,2,Chidi Anagonye,How is that a defense?
+1,2,Chidi Anagonye,You made a bad choice.
+1,2,Eleanor Shellstrop,I made a bad choice?
+1,2,Eleanor Shellstrop,"We could have literally been flying, and all you wanted to do was talk about morals."
+1,2,Eleanor Shellstrop,"I mean, you're like the worst part of Superman."
+1,2,Chidi Anagonye,This is a relief.
+1,2,Chidi Anagonye,I can stop my deliberations.
+1,2,Chidi Anagonye,"You're a selfish person, and it is pointless to help you."
+1,2,Chidi Anagonye,You are on your own.
+1,2,Antonio,"Oh, man."
+1,2,Antonio,"How 'bout this trash storm, Gunnar?"
+1,2,Gunnar,More cleaning up to do.
+1,2,Antonio,It's a it's a dream come true.
+1,2,Antonio,We're okay!
+1,2,Antonio,You can't die here.
+1,2,Eleanor Shellstrop,"Come on, I mean, even you have to admit, those guys are psycho."
+1,2,Michael,I don't know what's happening to me.
+1,2,Michael,"I mean, it's my duty to be calm and in control and I'm falling apart."
+1,2,Tahani Al-Jamil,"No, Michael, you are a paragon of fortitude."
+1,2,Tahani Al-Jamil,You're a mountain of strength.
+1,2,Michael,I'm not a mountain of strength.
+1,2,Michael,I'm a canyon full of poo-poo.
+1,2,Tahani Al-Jamil,"Jianyu, the architect of this neighborhood has just referred to himself as a canyon full of poo-poo."
+1,2,Tahani Al-Jamil,Surely now you will say something.
+1,2,Tahani Al-Jamil,Grace us with your vocalized wisdom.
+1,2,Tahani Al-Jamil,"Please, I'm begging you."
+1,2,Michael,Oh.
+1,2,Michael,"Yes, yes, I understand."
+1,2,Michael,The strength is inside me.
+1,2,Michael,It's been there all along.
+1,2,Michael,"No, of course, I can overcome any obstacle."
+1,2,Michael,"Oh, thank you, Jianyu, thank you."
+1,2,Michael,I'm back.
+1,2,Tahani Al-Jamil,You did it.
+1,2,Tahani Al-Jamil,"Oh, you have so much to teach me."
+1,2,Tahani Al-Jamil,"Maybe I should try to be silent, too."
+1,2,Tahani Al-Jamil,"No really, look."
+1,2,Tahani Al-Jamil,Here I go.
+1,2,Tahani Al-Jamil,Oh!
+1,2,Tahani Al-Jamil,That was wonderful!
+1,2,Tahani Al-Jamil,So cleansing.
+1,2,Kirk,"Just water tonight, huh?"
+1,2,Kirk,Designated driver?
+1,2,Eleanor Shellstrop,"Yeah, it sucks."
+1,2,Kirk,I think it's awesome.
+1,2,Kirk,"I mean, someone's got to do it, right?"
+1,2,Kirk,I think it's a cool thing to do for people.
+1,2,Eleanor Shellstrop,Yeah.
+1,2,Eleanor Shellstrop,"No, I meant I meant it sucks that I can't do it more often, you know?"
+1,2,Eleanor Shellstrop,I actually prefer it to drinking.
+1,2,Eleanor Shellstrop,"Staying sober and knowing my friends will get home safe, that's my buzz."
+1,2,Eleanor Shellstrop,"Hey, guys, good news and bad news."
+1,2,Eleanor Shellstrop,See that hot bartender over there?
+1,2,Eleanor Shellstrop,"He's into me, and we're gonna bang it out."
+1,2,Eleanor Shellstrop,"The bad news is, it means I can't drive you guys home."
+1,2,Eleanor Shellstrop,But I did call a cab for you guys.
+1,2,Eleanor Shellstrop,"But they recognized my number, and they didn't want to come."
+1,2,Eleanor Shellstrop,I've thrown up in a lot of cabs.
+1,2,Eleanor Shellstrop,So are we good here?
+1,2,Betsy,"Eleanor, you have a very important choice to make."
+1,2,Betsy,"If you blow us off, you are banned from Thursday night drinks forever."
+1,2,Eleanor Shellstrop,"Yeah, I'm good with that."
+1,2,Eleanor Shellstrop,I'll see you guys at work.
+1,2,Eleanor Shellstrop,Peace!
+1,2,Eleanor Shellstrop,"You, let's go."
+1,2,Eleanor Shellstrop,Hey.
+1,2,Eleanor Shellstrop,How did you know I was here?
+1,2,Chidi Anagonye,I saw you from my window.
+1,2,Chidi Anagonye,"That's where I live, by the way."
+1,2,Chidi Anagonye,Not that you ever asked.
+1,2,Chidi Anagonye,What are you doing?
+1,2,Eleanor Shellstrop,I went to all the places where I dumped trash earlier and cleaned it up so it couldn't be traced back to me.
+1,2,Chidi Anagonye,"Well, it looks like you cleaned up everything."
+1,2,Chidi Anagonye,You're doing this because you feel bad.
+1,2,Chidi Anagonye,"And you're not even doing it to get me to help you anymore, because I told you that's not gonna happen."
+1,2,Eleanor Shellstrop,"Okay, yeah, fine, I felt bad for stupid Gunnar and stupider Antonio and the whole neighborhood."
+1,2,Eleanor Shellstrop,I felt bad about what I did.
+1,2,Eleanor Shellstrop,It was a weird feeling.
+1,2,Eleanor Shellstrop,Not used to it.
+1,2,Eleanor Shellstrop,Didn't love it.
+1,2,Chidi Anagonye,"Well, feeling remorse about being wrong isn't as good as just doing something right, but it's a start."
+1,2,Chidi Anagonye,"Look, I think you're capable of change."
+1,2,Chidi Anagonye,And I will help you try.
+1,2,Eleanor Shellstrop,"Oh, wow, man, I swear I won't let you down."
+1,2,Janet,Hi there.
+1,2,Janet,I've collected the worst-smelling garbage that I could find.
+1,2,Janet,Do you still want me to dump it inside of Antonio's house?
+1,2,Eleanor Shellstrop,What?
+1,2,Eleanor Shellstrop,No.
+1,2,Eleanor Shellstrop,I did not tell you to do that.
+1,2,Eleanor Shellstrop,"You are loco, girlfriend."
+1,2,Eleanor Shellstrop,"Okay, I won't let you down starting now."
+1,2,Michael,"Ah, Eleanor."
+1,2,Michael,Good morning.
+1,2,Eleanor Shellstrop,"Michael, do you know what the best part about this place is?"
+1,2,Eleanor Shellstrop,You figured out how to make a to-go cup that doesn't leak right where the seam meets the lid.
+1,2,Michael,"Oh, I'm so glad you noticed."
+1,2,Michael,I was very proud of that.
+1,2,Michael,One of the hardest problems I had to solve.
+1,2,Michael,"Eleanor, I know what you did."
+1,2,Michael,Cleaning up the entire neighborhood by yourself.
+1,2,Michael,"I knew you were special, but this is proof."
+1,2,Eleanor Shellstrop,"Well, I was just doing my part."
+1,2,Eleanor Shellstrop,"You know, and, um since I'm special, your words, I didn't get to fly."
+1,2,Michael,I'm sorry.
+1,2,Michael,"No, I've had to ban flying for 1,000 years."
+1,2,Michael,Too many injuries.
+1,2,Michael,"One resident hit a rotting turkey carcass at a 1,000 miles an hour."
+1,2,Michael,It just exploded into this fireball of turkey flesh and bones and sinew.
+1,2,Michael,"Anyway, enjoy your coffee."
+1,2,Michael,And the cup.
+1,2,Chidi Anagonye,So I have moved out of my apartment officially and into your guest room.
+1,2,Chidi Anagonye,"Figured it would cause less suspicion and make things easier for our ""good person"" lessons."
+1,2,Eleanor Shellstrop,Cool.
+1,2,Eleanor Shellstrop,"Uh, just FYI, I'm a very loud snorer."
+1,2,Eleanor Shellstrop,"And I like to drip dry in the nude, so eyes to yourself, perv."
+1,2,Chidi Anagonye,Okay.
+1,2,Chidi Anagonye,Fine.
+1,2,Chidi Anagonye,Now you got a long way to go to pull this off.
+1,2,Chidi Anagonye,It will take hours and hours of studying ethics and moral philosophy.
+1,2,Chidi Anagonye,We're gonna have assignments and quizzes and papers.
+1,2,Chidi Anagonye,It's gonna be so much fun.
+1,2,Eleanor Shellstrop,Remind me what I'm getting out of this again.
+1,2,Chidi Anagonye,You get to avoid eternal damnation.
+1,2,Eleanor Shellstrop,"Oh, yeah."
+1,2,Eleanor Shellstrop,Right.
+1,2,Eleanor Shellstrop,"Hey, I got you a present."
+1,2,Chidi Anagonye,What?
+1,2,Eleanor Shellstrop,Senegal.
+1,2,Chidi Anagonye,That's not a present.
+1,2,Chidi Anagonye,That's just common decency.
+1,2,Eleanor Shellstrop,"Yeah, but I forkin' nailed it."
+1,2,Chidi Anagonye,Good talk.
+1,2,Eleanor Shellstrop,"Aw, shirt."
+1,3,Chidi Anagonye,"So, Aristotle was Plato's student."
+1,3,Chidi Anagonye,"And Aristotle believes that your character is voluntary, because it's just the result of your actions, which are under your control."
+1,3,Chidi Anagonye,"For example, right now, you have made the insane choice to ignore the person who is literally trying to save you from eternal damnation."
+1,3,Eleanor Shellstrop,"No, yeah, yeah, yeah, I'm listening."
+1,3,Eleanor Shellstrop,"Uh, I just are we sure we should be paying attention to these guys?"
+1,3,Eleanor Shellstrop,"It's like, who died and left Aristotle in charge of ethics?"
+1,3,Chidi Anagonye,Plato.
+1,3,Eleanor Shellstrop,"Uh, coming!"
+1,3,Eleanor Shellstrop,"Uh, we're just kissing."
+1,3,Eleanor Shellstrop,And groping?
+1,3,Chidi Anagonye,What?
+1,3,Tahani Al-Jamil,Hello.
+1,3,Chidi Anagonye,Tahani.
+1,3,Chidi Anagonye,Hi.
+1,3,Chidi Anagonye,What brings you here?
+1,3,Tahani Al-Jamil,"You know, I was just, uh, in the neighborhood."
+1,3,Tahani Al-Jamil,"Do you get it, Eleanor?"
+1,3,Tahani Al-Jamil,"Because, you know, we're all in the same afterlife, so, you know, I'm always in the neighborhood."
+1,3,Tahani Al-Jamil,Do you get it?
+1,3,Eleanor Shellstrop,"I do, and it's delightful."
+1,3,Tahani Al-Jamil,"Anyway, this is for you."
+1,3,Tahani Al-Jamil,Just a housewarming plant.
+1,3,Tahani Al-Jamil,"It's a little reminder that if there's ever anything that you need, I am right next door."
+1,3,Eleanor Shellstrop,How could I possibly forget?
+1,3,Eleanor Shellstrop,"Have a great day, Tahani!"
+1,3,Tahani Al-Jamil,"Oh, all right."
+1,3,Eleanor Shellstrop,Ugh.
+1,3,Eleanor Shellstrop,Tahani.
+1,3,Eleanor Shellstrop,Welcome to the neighborhood.
+1,3,Eleanor Shellstrop,Even though we all arrived here at the same time.
+1,3,Eleanor Shellstrop,Here's some dirt I put in a bowl because I'm amazing.
+1,3,Chidi Anagonye,I thought it was kind of a nice gesture.
+1,3,Eleanor Shellstrop,"Oh, Chidi."
+1,3,Eleanor Shellstrop,It's a total con.
+1,3,Eleanor Shellstrop,I see through her little act.
+1,3,Chidi Anagonye,Her act of being a nice person who brings you gifts?
+1,3,Eleanor Shellstrop,Bingo.
+1,3,Chidi Anagonye,Okay.
+1,3,Chidi Anagonye,I'll I'll remind you that you're trying to learn how to be a good person.
+1,3,Eleanor Shellstrop,Mmm-hmm.
+1,3,Chidi Anagonye,Maybe you should return the favor and bring her something.
+1,3,Eleanor Shellstrop,"Oh, so now I'm supposed to be nice and make friends and treat her with mutual respect?"
+1,3,Chidi Anagonye,Yeah.
+1,3,Eleanor Shellstrop,"That's exactly what she wants me to do, Chidi."
+1,3,Eleanor Shellstrop,Wake up!
+1,3,Chidi Anagonye,"That, that's what everyone wants everyone to do."
+1,3,Michael,"Hello, Chidi."
+1,3,Michael,No frozen yogurt for you this morning?
+1,3,Chidi Anagonye,"Oh, uh, no, just, uh, doing some reading."
+1,3,Janet,"Ugh, been there, brother."
+1,3,Janet,"Workin' hard or hardly workin', am I right?"
+1,3,Janet,Hump day.
+1,3,Michael,"Uh, sorry."
+1,3,Michael,"Janet's functioning as my assistant, but she's a little stiff, so I've been trying to get her to be a little more casual and conversational."
+1,3,Janet,I'll have what she's having.
+1,3,Michael,It's a work in progress.
+1,3,Michael,"Listen, Chidi."
+1,3,Michael,I've been studying your file.
+1,3,Michael,You're a very interesting case.
+1,3,Michael,You essentially only did one thing while you were on Earth.
+1,3,Michael,You thought and wrote about ethics.
+1,3,Chidi Anagonye,"Yes, I spent 18 years working on my manuscript called, Who We Are and Who We Are Not"
+1,3,Michael,"Right. No, no, no."
+1,3,Chidi Anagonye,Practical Ethics and Their Application in the Modern World; A Treatise on --
+1,3,Michael,"Yes, yes, yes, that's the one."
+1,3,Michael,That's the one.
+1,3,Chidi Anagonye,Mmm-hmm.
+1,3,Michael,I think you should experience new adventures.
+1,3,Michael,"You know, do things that you haven't done on Earth, right?"
+1,3,Michael,So why don't we meet tomorrow and try out some new hobbies.
+1,3,Chidi Anagonye,"Uh, why not?"
+1,3,Chidi Anagonye,I'll see you guys tomorrow.
+1,3,Janet,Not if I see you first.
+1,3,Janet,Where's the beef?
+1,3,Michael,I don't know.
+1,3,Janet,Hump day.
+1,3,Tahani Al-Jamil,"Hello, Eleanor."
+1,3,Tahani Al-Jamil,"Jianyu, darling, look, it's Eleanor from next door."
+1,3,Eleanor Shellstrop,Is he asleep?
+1,3,Tahani Al-Jamil,"Yeah, there's really no way to tell."
+1,3,Tahani Al-Jamil,Come on in.
+1,3,Tahani Al-Jamil,"What brings you to our home, my dear?"
+1,3,Eleanor Shellstrop,"Well, I'm simply repaying your kind gift with a housewarming gift of my own."
+1,3,Eleanor Shellstrop,Fresh pears.
+1,3,Eleanor Shellstrop,"It's a plant, just like your gift, but you can actually eat them."
+1,3,Eleanor Shellstrop,So maybe it's a better gift.
+1,3,Eleanor Shellstrop,Who's to say?
+1,3,Tahani Al-Jamil,That's so kind.
+1,3,Tahani Al-Jamil,"However, in, um, Chinese culture, pears are actually a symbol of bad luck."
+1,3,Tahani Al-Jamil,"And I wouldn't want to offend Jianyu, so I'm afraid I'm gonna have to throw these in the garbage."
+1,3,Tahani Al-Jamil,But do come and sit down.
+1,3,Tahani Al-Jamil,We haven't even had a chance to discuss all of the mayhem in our neighborhood yet.
+1,3,Tahani Al-Jamil,It's so disconcerting.
+1,3,Eleanor Shellstrop,Yes.
+1,3,Eleanor Shellstrop,What do you think is causing it?
+1,3,Tahani Al-Jamil,"Oh, I'm sure I don't know."
+1,3,Tahani Al-Jamil,But we must keep our heads up.
+1,3,Tahani Al-Jamil,"In fact, tomorrow I'm actually going door-to-door to make sure that every single person in this entire neighborhood is keeping calm and carrying on."
+1,3,Tahani Al-Jamil,"Cause I think that helping others will make me feel like I truly belong here, you know?"
+1,3,Eleanor Shellstrop,"Here's a brainstorm, why don't I go with you?"
+1,3,Eleanor Shellstrop,"I mean, I would love to do my part to help the neighborhood, not to mention, get a little bonding time with you, lady."
+1,3,Tahani Al-Jamil,"Oh, hurrah!"
+1,3,Tahani Al-Jamil,Such fun.
+1,3,Eleanor Shellstrop,"I'm telling you, Tahani's out to get me."
+1,3,Chidi Anagonye,What are you talking about?
+1,3,Eleanor Shellstrop,This note was slipped under my door yesterday.
+1,3,Eleanor Shellstrop,It has to be Tahani.
+1,3,Eleanor Shellstrop,"She just said to me, ""I want to feel like I truly belong here."""
+1,3,Eleanor Shellstrop,"Well, where have I seen the word ""belong"" recently?"
+1,3,Eleanor Shellstrop,"Oh, yeah, kaplow!"
+1,3,Chidi Anagonye,I really don't think she's the type of person who would write this.
+1,3,Eleanor Shellstrop,She is that kind of person and she did write it.
+1,3,Eleanor Shellstrop,She wants everybody to think she's such a perfect princess just 'cause she's tall and glamorous and has cappuccino skin and curves everywhere.
+1,3,Eleanor Shellstrop,And now I'm complimenting her.
+1,3,Eleanor Shellstrop,And kind of turned on.
+1,3,Eleanor Shellstrop,"The point is, she straight up sucks, bro."
+1,3,Eleanor Shellstrop,Typical Tahani.
+1,3,Eleanor Shellstrop,Brings us a faulty plant so she can brag about being a better gardener.
+1,3,Chidi Anagonye,"No, I think this is another way in which your negative actions affect this world."
+1,3,Chidi Anagonye,"This plant represents your relationship to Tahani, so when you're mean to her, it starts to wilt."
+1,3,Eleanor Shellstrop,"Well, then this plant is doomed because tomorrow, I'm going with her and I'm gonna prove to you and to everyone that she is secretly a two-faced, calculating, phony bench."
+1,3,Eleanor Shellstrop,Hmm.
+1,3,Eleanor Shellstrop,Yeah.
+1,3,Eleanor Shellstrop,"Truth hurts, doesn't it, plant?"
+1,3,Tahani Al-Jamil,"So, all I want to do is just check in, see how everyone's holding up."
+1,3,Tahani Al-Jamil,Just bring some cheer to these extraordinary people.
+1,3,Eleanor Shellstrop,Cool.
+1,3,Eleanor Shellstrop,"So, tell me about yourself."
+1,3,Eleanor Shellstrop,"I mean, I want to hear it all, girlfriend."
+1,3,Eleanor Shellstrop,"The good, the bad, the really bad, the embarrassing, the humiliating, just let's bond."
+1,3,Tahani Al-Jamil,"Okay, well I was born in Pakistan, raised in London, schooled in Paris, but I think the primary reason that I'm in The Good Place is that I raised quite a lot of money for non-profit groups."
+1,3,Eleanor Shellstrop,Oh.
+1,3,Eleanor Shellstrop,"Did you ever, uh, skim a little off the top for yourself?"
+1,3,Tahani Al-Jamil,"Gracious, no, no!"
+1,3,Tahani Al-Jamil,Every penny was accounted for.
+1,3,Tahani Al-Jamil,"And as I raised nearly $60,000,000,000, there was quite a lot of pennies."
+1,3,Tahani Al-Jamil,But I also dabbled in some other professions.
+1,3,Tahani Al-Jamil,"I was a model, a museum curator, an ""It Girl"", and oh, I was Baz Luhrmann's muse for a while."
+1,3,Tahani Al-Jamil,That was quite fun.
+1,3,Eleanor Shellstrop,Modeling?
+1,3,Eleanor Shellstrop,That's a crazy life.
+1,3,Eleanor Shellstrop,Want to tell me about that rock bottom you probably hit?
+1,3,Tahani Al-Jamil,"Oh, I didn't really do it for long."
+1,3,Tahani Al-Jamil,Couture just doesn't fit my body.
+1,3,Tahani Al-Jamil,I'm cursed with ample bosom.
+1,3,Eleanor Shellstrop,And yet you soldier on.
+1,3,Tahani Al-Jamil,"Oh, this is silly"
+1,3,Tahani Al-Jamil,"So ""Tahani"" means ""congratulations"" in Arabic."
+1,3,Tahani Al-Jamil,"And ""Al-Jamil"" means ""beautiful"", so my full name altogether means"
+1,3,Eleanor Shellstrop,"""Congratulations, Beautiful."""
+1,3,Tahani Al-Jamil,"Thanks, Eleanor."
+1,3,Tahani Al-Jamil,You big flirt.
+1,3,Eleanor Shellstrop,"Hey, babe, got you coffee."
+1,3,Samuel,"Oh, great."
+1,3,Samuel,"Oh, Andy's Coffee, uh, we shouldn't go there."
+1,3,Samuel,Everybody's boycotting.
+1,3,Eleanor Shellstrop,"Yeah, I know that one guy found a scorpion in his latte."
+1,3,Eleanor Shellstrop,"I don't really care, though, 'cause it's so close to here."
+1,3,Samuel,"No, no, no, it's because he's sexually harassing people."
+1,3,Samuel,"Look, a journalist went undercover for an interview and recorded him."
+1,3,Samuel,"Here, watch."
+1,3,Andy,"Here's the thing, sweetheart."
+1,3,Andy,"You're very qualified, but you're also what we call in the coffee shop game a, uh, dog-face."
+1,3,Andy,"You're a three, and you have to be a nine to work here."
+1,3,Andy,It's just math.
+1,3,Woman,"So, I didn't get the job?"
+1,3,Andy,"No, dog-face, you didn't get the job."
+1,3,Andy,"All right, I'll check your references."
+1,3,Andy,Just to be nice --
+1,3,Woman,"Hey, my breasts!"
+1,3,Andy,I'll check 'em.
+1,3,Andy,"Oh, they're good."
+1,3,Andy,Honk!
+1,3,Samuel,"I mean, this guy's a monster, we can't support this guy."
+1,3,Eleanor Shellstrop,"Okay, hey, you're not better than me just 'cause you won't support a guy who grabbed a boob once."
+1,3,Samuel,"No, I'm just saying we shouldn't go there."
+1,3,Samuel,We can get coffee somewhere else.
+1,3,Andy,Did you know your left reference is a little bit bigger than your right reference?
+1,3,Andy,"It's not a bad thing, it's just it's a thing."
+1,3,Michael,"This is the perfect hobby for you, Chidi."
+1,3,Michael,Cartography.
+1,3,Michael,Your neighborhood stretches way beyond what you've already seen.
+1,3,Michael,"And you can map it, revealing all of the mysteries, like an explorer."
+1,3,Chidi Anagonye,I see how that might be fun.
+1,3,Chidi Anagonye,"Uh, but, uh, exploring makes me nervous."
+1,3,Chidi Anagonye,"I have what doctors call, ""directional insanity""."
+1,3,Chidi Anagonye,I once got lost on an escalator.
+1,3,Chidi Anagonye,"So, not exactly Christopher Columbus."
+1,3,Janet,"Fun fact, Columbus is in The Bad Place because of all the raping, slave trade and genocide."
+1,3,Michael,The fact that it makes you nervous is exactly why you should do it.
