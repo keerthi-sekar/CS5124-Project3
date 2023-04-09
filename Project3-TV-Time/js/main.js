@@ -1,28 +1,42 @@
 let data, barchartA, barchartB, wordcloud;
 let season_options = ["All Seasons"];
-let episode_options = ["All Episodes"]
+let episode_options = ["All Episodes"];
+let cast = [];
 //season,episode,character,line
 d3.csv('data/dummy_data.csv')
 .then(_data => {
   data = _data;
 
     data.forEach(d => {
-      d.season = +d.season;
-      d.episode = +d.episode;
-      d.character = d.character;
-      d.line = d.line;
+        d.season = +d.season;
+        d.episode = +d.episode;
+        d.character = d.character;
+        d.line = d.line;
+
+        if(d.character == "Eleanor Shellstrop" || d.character == "Michael" || d.character == "Tahani Al-Jamil" ||
+      d.character == "Janet" || d.character == "Jason Mendoza" || d.character == "Chidi Anagonye")
+      {
+        var datapoint = {
+          'Season': d.season,
+          'Episode': d.episode,
+          'Character': d.character,
+          'Line': d.line
+        }
+        cast.push(datapoint);
+      }
     });
 
-    console.log(data);
+    console.log(cast);
 
-    data = data.sort(function (a,b) {return d3.ascending(a.season, b.season);});
-    data = data.sort(function (a,b) {return d3.ascending(a.episode, b.episode);});
-    data = data.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
+    cast = cast.sort(function (a,b) {return d3.ascending(a.Season, b.Season);});
+    cast = cast.sort(function (a,b) {return d3.ascending(a.Episode, b.Episode);});
+    //cast = cast.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
 
-    var character_rollup = d3.rollups(data, v => v.length, d => d.character);
-    var line_rollup = d3.rollups(data, v => v.length, d => d.line);
-    var episode_rollup = d3.rollups(data, v => v.length, d => d.episode);
-    var season_rollup = d3.rollups(data, v => v.length, d => d.season);
+    var character_rollup = d3.rollups(cast, v => v.length, d => d.Character);
+    var line_rollup = d3.rollups(cast, v => v.length, d => d.Line);
+    var episode_rollup = d3.rollups(cast, v => v.length, d => d.Episode);
+    var season_rollup = d3.rollups(cast, v => v.length, d => d.Season);
+    console.log('cast', character_rollup);
 
     season_rollup.forEach(v => {
       season_options.push("Season " + v[0]);
