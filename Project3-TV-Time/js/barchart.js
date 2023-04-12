@@ -5,17 +5,17 @@ class Barchart {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data, _map) {
+    constructor(_config, _data, _map, _width) {
       // Configuration object with defaults
       this.config = {
         parentElement: _config.parentElement,
-        containerWidth: _config.containerWidth || 550,
-        containerHeight: _config.containerHeight || 650,
+        containerWidth: _config.containerWidth || _width,
+        containerHeight: _config.containerHeight || 466,
         margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 40},
         reverseOrder: _config.reverseOrder || false,
         tooltipPadding: _config.tooltipPadding || 15,
-        xAxisTitle: _config.xAxisTitle || ' ',
-        yAxisTitle: _config.yAxisTitle || ' ',
+        xAxisTitle: _config.xAxisTitle
+        // yAxisTitle: _config.yAxisTitle || ' ',
       }
       this.data = _data;
       this.num_map = _map;
@@ -76,14 +76,18 @@ class Barchart {
           .attr('y', -10)
           .attr('dy', '.71em')
           .text(vis.config.yAxisTitle);
+
+      // Color scale for month/day
+      vis.colorScale = d3.scaleOrdinal().range(d3.schemeCategory10)
+      .domain(["1","2","3","4"]);
   
-      vis.chart.append('text') //x-axis = radius [dist]
-      .attr('class', 'axis-title')
-      .attr('y', vis.height + 25)
-      .attr('x', vis.width + 5)
-      .attr('dy', '.71em')
-      .style('text-anchor', 'end')
-      .text(vis.config.xAxisTitle);
+      // vis.chart.append('text') //x-axis = radius [dist]
+      // .attr('class', 'axis-title')
+      // .attr('y', vis.height + 25)
+      // .attr('x', vis.width + 5)
+      // .attr('dy', '.71em')
+      // .style('text-anchor', 'end')
+      // .text(vis.config.xAxisTitle);
     }
   
     /**
@@ -113,6 +117,8 @@ class Barchart {
       // Set the scale input domains
       vis.xScale.domain(vis.aggregatedData.map(vis.xValue));
       vis.yScale.domain([0, d3.max(vis.aggregatedData, vis.yValue)]);
+
+      vis.colorValue = d => d.key < 14 ? "1" : d.key < 27 ? "2" : d.key < 40 ? "3" : "4";
   
       vis.renderVis();
     }
@@ -124,7 +130,7 @@ class Barchart {
       let vis = this;
   
       // Add rectangles
-      const bars = vis.chart.selectAll('.bar')
+      vis.bars = vis.chart.selectAll('.bar')
           .data(vis.aggregatedData, vis.xValue)
         .join('rect')
           .attr('class', 'bar')
@@ -132,9 +138,10 @@ class Barchart {
           .attr('width', vis.xScale.bandwidth())
           .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
           .attr('y', d => vis.yScale(vis.yValue(d)))
-          .attr('fill', '#2962dd')
+          // .attr('fill', '#2962dd')
+          .attr('fill', vis.config.xAxisTitle == "Characters" ? '#2962dd' : d => vis.colorScale(vis.colorValue(d)))
   
-      bars
+      vis.bars
         .on('mouseover', (event,d) => {
           d3.select('#tooltip')
             .style('display', 'block')
@@ -149,12 +156,19 @@ class Barchart {
           d3.select('#tooltip').style('display', 'none');
         });
       // Update axes
-      vis.xAxisG.call(vis.xAxis)
-          .selectAll("text")  
+      // vis.xAxisG.call(vis.xAxis)
+
+      console.log(vis.config.xAxisTitle)
+      if(vis.config.xAxisTitle == "Characters") {
+        vis.xAxisG.call(vis.xAxis).selectAll("text")  
           .style("text-anchor", "end")
           .attr("dx", "-.8em")
           .attr("dy", ".15em")
           .attr("transform", "rotate(-65)");
+      }
+      else {
+        vis.xAxisG.call(vis.xAxis)
+      }
 
       vis.yAxisG.call(vis.yAxis);
     }

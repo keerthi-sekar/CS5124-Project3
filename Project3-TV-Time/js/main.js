@@ -1,6 +1,8 @@
-let data, barchartA, barchartB, wordcloud;
+let data, barchartA, barchartB, wordcloud, character_rollup, episode_rollup;
+let selectedOption = "All Seasons"
 let season_options = ["All Seasons"];
-let episode_options = ["All Episodes"];
+// let episode_options = ["All Episodes"];
+let filter = [];
 let cast = [];
 //season,episode,character,line
 d3.csv('data/script.csv')
@@ -33,9 +35,9 @@ d3.csv('data/script.csv')
     cast = cast.sort(function (a,b) {return d3.ascending(a.Episode, b.Episode);});
     //cast = cast.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
 
-    var character_rollup = d3.rollups(cast, v => v.length, d => d.Character);
+    character_rollup = d3.rollups(cast, v => v.length, d => d.Character);
     var line_rollup = d3.rollups(data, v => v.length, d => d.character);
-    var episode_rollup = d3.rollups(cast, v => v.length, d => d.Episode);
+    episode_rollup = d3.rollups(cast, v => v.length, d => d.Episode);
     var season_rollup = d3.rollups(cast, v => v.length, d => d.Season);
     console.log('cast', line_rollup);
 
@@ -45,11 +47,12 @@ d3.csv('data/script.csv')
 
     season_options.sort();
 
-    episode_rollup.forEach(v => {
-      episode_options.push("Episode " + v[0]);
-    })
+    // console.log(episode_rollup)
+    // episode_rollup.forEach(v => {
+    //   episode_options.push("Episode " + v[0]);
+    // })
 
-    episode_options.sort();
+    // episode_options.sort();
 
     var selectSeason = document.getElementById("seasonDropDown");
 
@@ -61,28 +64,28 @@ d3.csv('data/script.csv')
         selectSeason.appendChild(el);
     }
     
-    var selectEpisode = document.getElementById("episodeDropDown");
+    // var selectEpisode = document.getElementById("episodeDropDown");
 
-    for(var i = 0; i < episode_options.length; i++) {
-        var opt = episode_options[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        selectEpisode.appendChild(el);
-    }
+    // for(var i = 0; i < episode_options.length; i++) {
+    //     var opt = episode_options[i];
+    //     var el = document.createElement("option");
+    //     el.textContent = opt;
+    //     el.value = opt;
+    //     selectEpisode.appendChild(el);
+    // }
 
     var window_width = window.innerWidth;
     barchartA = new Barchart({
 			parentElement: '#chart1',
-			//xAxisTitle: 'Characters'
-		  }, data, character_rollup, window_width / 2 - 50);
+			xAxisTitle: 'Characters'
+		  }, data, character_rollup, 350);
 		
 		barchartA.updateVis();
 
     barchartB = new Barchart({
 			parentElement: '#chart2',
-			//xAxisTitle: 'Episodes'
-		  }, data, episode_rollup, window_width / 2 - 50);
+			xAxisTitle: 'Episodes'
+		  }, data, episode_rollup, 750);
 		
 		barchartB.updateVis();
 
@@ -94,9 +97,30 @@ d3.csv('data/script.csv')
   })
   .catch(error => console.error(error));
 
- /*  d3.select("#seasonDropDown").on("change", function(d) {
+  d3.select("#seasonDropDown").on("change", function(d) {
     // recover the option that has been chosen
     selectedOption = d3.select(this).property("value");
+    console.log(selectedOption)
+    var tempData = [];
+    if(selectedOption == "All Seasons") {
+      tempData = cast;
+    }
+    else {
+      var seasonNum = selectedOption.substring(7,8)
+      tempData = cast.filter(v => v.Season == seasonNum)
+      console.log(tempData)
+    }
 
-  }) */
+    var character_rollup_tmp = d3.rollups(tempData, v => v.length, d => d.Character);
+    var episode_rollup_tmp = d3.rollups(tempData, v => v.length, d => d.Episode);
+
+    barchartA.num_map = character_rollup_tmp;
+    barchartB.num_map = episode_rollup_tmp;
+
+    barchartA.bars.remove();
+    barchartA.updateVis();
+
+    barchartB.bars.remove();
+    barchartB.updateVis();
+  })
 
