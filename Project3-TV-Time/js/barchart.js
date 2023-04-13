@@ -128,12 +128,26 @@ class Barchart {
      */
     renderVis() {
       let vis = this;
+
+      // create tooltip element  
+      const tooltip = d3.select("body")
+        .append("div")
+        .style("position", "absolute")
+        .style("z-index", "10")
+        .style("visibility", "hidden")
+        .style("padding", "2px 8px")
+        .style("background", "#fff")
+        .style("border", "1px solid #ddd")
+        .style("width", "150px")
+        .style("box-shadow", "2px 2px 3px 0px rgb(92 92 92 / 0.5)")
+        .style("font-size", "12px")
+        .style("font-weight", "600");
   
       // Add rectangles
       vis.bars = vis.chart.selectAll('.bar')
           .data(vis.aggregatedData, vis.xValue)
         .join('rect')
-          .attr('class', 'bar')
+          .attr('class',  d => (episodeFilter.find(e => e === d.key) || characterFilter.find(e => e === d.key) ? 'bar active' : "bar"))
           .attr('x', d => vis.xScale(vis.xValue(d)))
           .attr('width', vis.xScale.bandwidth())
           .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
@@ -143,17 +157,65 @@ class Barchart {
   
       vis.bars
         .on('mouseover', (event,d) => {
-          d3.select('#tooltip')
-            .style('display', 'block')
-            .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
-            .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
-            .html(`
-              <div class="tooltip-title">${vis.config.xAxisTitle}: ${d.key}</div>
-              <div><i>Exoplanets: ${d.count}</i></div>
-            `);
+          if(vis.config.xAxisTitle == "Episodes") {
+            var season = d.key < 14 ? 1 : d.key < 27 ? 2 : d.key < 40 ? 3 : 4;
+            var episode = season == 1 ? d.key : season == 2 ? d.key - 13 : season == 3 ? d.key - 26 : d.key - 39
+            tooltip.html(`
+            <div class="tooltip-title">Season: ${season}</div>
+            <div class="tooltip-title">Episode: ${episode}</div>
+            <div class="tooltip-label">Number of lines: ${d.count}</div>
+          `).style("visibility", "visible");
+          }
+          else if(vis.config.xAxisTitle == "Characters") {
+            tooltip.html(`
+                <div class="tooltip-title">Character: ${d.key}</div>
+                <div class="tooltip-label">Number of lines: ${d.count}</div>
+              `).style("visibility", "visible");
+          }
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
         })
         .on('mouseleave', () => {
-          d3.select('#tooltip').style('display', 'none');
+          // d3.select('#tooltip').style('display', 'none');
+          tooltip.html(``).style("visibility", "hidden");
+        });
+
+        vis.bars.on('click', function(event, d) {
+          if(vis.config.xAxisTitle == "Episodes") {
+            tooltip.html(``).style("visibility", "hidden");
+            var isActive = false
+            isActive = episodeFilter.find(e => e === d.key) // Check if selected episode is already applied
+
+            if (isActive) {
+              d3.select(this).attr("class", "bar");
+              // Remove from filter
+              episodeFilter = episodeFilter.filter(f => f !== isActive);
+            } else {
+              d3.select(this).attr("class", "bar active");
+              // Add to filter
+              episodeFilter.push(d.key)
+            }
+            filterData(); // Call global function to update charts
+          }
+          else if(vis.config.xAxisTitle == "Characters")  {
+            tooltip.html(``).style("visibility", "hidden");
+            var isActive = false
+            isActive = characterFilter.find(e => e === d.key) // Check selected character is already applied
+
+            if (isActive) {
+              d3.select(this).attr("class", "bar");
+              // Remove from filter
+              characterFilter = characterFilter.filter(f => f !== isActive);
+            } else {
+              d3.select(this).attr("class", "bar active");
+              // Add to filter
+              characterFilter.push(d.key)
+            }
+            filterData(); // Call global function to update charts
+          }
         });
       // Update axes
       // vis.xAxisG.call(vis.xAxis)
