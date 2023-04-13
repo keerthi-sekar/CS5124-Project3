@@ -24,10 +24,10 @@ d3.csv('data/script.csv')
       || d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" ||d.character == "Trevor")
       {
         var datapoint = {
-          'Season': d.season,
-          'Episode': d.episode,
-          'Character': d.character,
-          'Line': d.line
+          'season': d.season,
+          'episode': d.episode,
+          'character': d.character,
+          'line': d.line
         }
 
         /* if(count < 500)
@@ -56,11 +56,11 @@ d3.csv('data/script.csv')
     cast = cast.sort(function (a,b) {return d3.ascending(a.Episode, b.Episode);});
     //cast = cast.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
 
-    character_rollup = d3.rollups(cast, v => v.length, d => d.Character);
+    character_rollup = d3.rollups(cast, v => v.length, d => d.character);
     var line_rollup = d3.rollups(words, v => v.length, d => d);
-    episode_rollup = d3.rollups(cast, v => v.length, d => d.Episode);
+    episode_rollup = d3.rollups(cast, v => v.length, d => d.episode);
 
-    var season_rollup = d3.rollups(cast, v => v.length, d => d.Season);
+    var season_rollup = d3.rollups(cast, v => v.length, d => d.season);
 
     season_rollup.forEach(v => {
       season_options.push("Season " + v[0]);
@@ -145,22 +145,22 @@ d3.csv('data/script.csv')
       // filter by season if applicable
       if(selectedOption != "All Seasons") {
         var seasonNum = selectedOption.substring(7,8)
-        filteredData = filteredData.filter(v => v.Season == seasonNum)
+        filteredData = filteredData.filter(v => v.season == seasonNum)
         console.log(filteredData)
       }
       // Apply episode filter if applicable
       episodeFilter.forEach(episodeNum => {
-        filteredData = filteredData.filter(v => v.Episode == episodeNum)
+        filteredData = filteredData.filter(v => v.episode == episodeNum)
       })
 
       // Apply character filter if applicable
       characterFilter.forEach(charName => {
-        filteredData = filteredData.filter(v => v.Character == charName)
+        filteredData = filteredData.filter(v => v.character == charName)
       })
       console.log(filteredData)
     }
-    var character_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.Character);
-    var episode_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.Episode);
+    var character_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.character);
+    var episode_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.episode);
 
     barchartA.num_map = character_rollup_tmp;
     barchartB.num_map = episode_rollup_tmp;
@@ -170,4 +170,6 @@ d3.csv('data/script.csv')
 
     barchartB.bars.remove();
     barchartB.updateVis();
+
+    wordcloud.updateVis(filteredData);
   }

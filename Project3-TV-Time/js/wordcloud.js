@@ -72,7 +72,7 @@ class WordCloud {
     }
 
 
-    renderVis() {
+    renderVis(data) {
         let vis = this;
         if (data == null) {
             vis.filtered_data = vis.data;
