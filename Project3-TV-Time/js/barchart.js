@@ -217,8 +217,6 @@ class Barchart {
             filterData(); // Call global function to update charts
           }
         });
-      // Update axes
-      // vis.xAxisG.call(vis.xAxis)
 
       console.log(vis.config.xAxisTitle)
       if(vis.config.xAxisTitle == "Characters") {
