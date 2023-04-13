@@ -113,9 +113,7 @@ d3.csv('data/script.csv')
   })
   .catch(error => console.error(error));
 
- /*  d3.select("#seasonDropDown").on("change", function(d) {
-    // recover the option that has been chosen
-    selectedOption = d3.select(this).property("value");
-
-  }) */
-
+  d3.json('data/miserables.json').then(data => {
+    let forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data);
+  })
+  .catch(error => console.error(error));
