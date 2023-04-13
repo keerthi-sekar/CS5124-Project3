@@ -8,6 +8,10 @@ body {
     background-color: #79a4ff5e;
 }
 
+line {
+    stroke: #545454;
+  }
+
 .flex-container {
     display: flex;
     background-color: rgb(255, 255, 255);

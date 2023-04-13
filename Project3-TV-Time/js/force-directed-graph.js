@@ -9,8 +9,8 @@ class ForceDirectedGraph {
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: 800,
-        containerHeight: 800,
-        margin: {top: 5, right: 10, bottom: 5, left: 10}
+        containerHeight: 600,
+        margin: {top: 15, right: 10, bottom: 15, left: 10}
       }
       this.data = _data;
       this.initVis();

@@ -11,7 +11,7 @@ class WordCloud {
         parentElement: _config.parentElement,
         containerWidth: _config.containerWidth || 800,
         containerHeight: _config.containerHeight || 500,
-        margin: _config.margin || {top: 25, right: 20, bottom: 40, left: 50},
+        margin: _config.margin || {top: 15, right: 10, bottom: 10, left: 10},
       }
       this.data = _data;
       this.filtered_data = this.data;

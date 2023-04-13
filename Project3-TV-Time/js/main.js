@@ -114,6 +114,6 @@ d3.csv('data/script.csv')
   .catch(error => console.error(error));
 
   d3.json('data/miserables.json').then(data => {
-    let forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data);
+    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data);
   })
   .catch(error => console.error(error));
