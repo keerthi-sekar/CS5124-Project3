@@ -57,6 +57,7 @@ d3.csv('data/script.csv')
     //cast = cast.sort(function (a,b) {return d3.ascending(a.scene, b.scene);});
 
     character_rollup = d3.rollups(cast, v => v.length, d => d.character);
+    character_rollup = character_rollup.sort(function(a, b){ return d3.descending(a[1], b[1]); })
     var line_rollup = d3.rollups(words, v => v.length, d => d);
     episode_rollup = d3.rollups(cast, v => v.length, d => d.episode);
 
@@ -160,6 +161,7 @@ d3.csv('data/script.csv')
       console.log(filteredData)
     }
     var character_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.character);
+    character_rollup_tmp = character_rollup_tmp.sort(function(a, b){ return d3.descending(a[1], b[1]); })
     var episode_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.episode);
 
     barchartA.num_map = character_rollup_tmp;

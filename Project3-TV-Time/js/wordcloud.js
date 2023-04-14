@@ -78,6 +78,7 @@ class WordCloud {
             vis.filtered_data = vis.data;
         } else {
             vis.filtered_data = data; //via input to function	
+            vis.text = []
         }
 
         vis.filtered_data.forEach(d=> {
