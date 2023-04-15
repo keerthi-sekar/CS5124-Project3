@@ -47,6 +47,18 @@ line {
     font-family: Segoe UI;
 }
 
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: honeydew;
+    font: 16px sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 8px;
+    pointer-events: none; /* keep the mouseover when over the tooltip */
+  }
+
 table
 {
     width: 400px;

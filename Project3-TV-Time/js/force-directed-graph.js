@@ -80,6 +80,49 @@ class ForceDirectedGraph {
         .join('circle')
           .attr('r', 5)
           .attr('fill', d => vis.colorScale(d.id));
+      
+      nodes
+      .call(d3.drag()
+            .on("start", ed => {
+                // heat the simulation:
+                if (!d3.event.active) simulation.alphaTarget(0.2).restart()
+                // set fixed x and y coordinates:	
+                d.fx = d.x
+                d.fy = d.y
+            })
+            .on("drag", d => {
+                // by fixing its position, this disables the forces acting on the node:
+                d.fx = d3.event.x
+                d.fy = d3.event.y
+            })
+            .on("end", d => {
+                // stop simulation:
+                if (!d3.event.active) simulation.alphaTarget(0)
+                // reactivate the force on the node:
+                d.fx = null
+                d.fy = null
+            })
+  	    );
+
+     // tooltip div:
+  const tooltip = d3.select('#chart5').append("div")
+    .classed("tooltip", true)
+    .style("opacity", 0) // start invisible
+
+    nodes
+        .on("mouseover", function(event, d) {
+        tooltip.transition()
+            .duration(300)
+            .style("opacity", 1) // show the tooltip
+        tooltip.html(d.id)
+            .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
+            .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
+    })
+    .on("mouseleave", function(d) {
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", 0)
+    })
   
       // Update positions
       vis.simulation.on('tick', () => {
@@ -93,5 +136,6 @@ class ForceDirectedGraph {
             .attr('cx', d => d.x)
             .attr('cy', d => d.y);
       });
+  	    
     }
   }
