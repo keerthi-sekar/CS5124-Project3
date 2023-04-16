@@ -83,21 +83,21 @@ class ForceDirectedGraph {
       
       nodes
       .call(d3.drag()
-            .on("start", ed => {
+            .on("start", function(event, d) {
                 // heat the simulation:
-                if (!d3.event.active) simulation.alphaTarget(0.2).restart()
+                if (!event.active) simulation.alphaTarget(0.2).restart()
                 // set fixed x and y coordinates:	
                 d.fx = d.x
                 d.fy = d.y
             })
-            .on("drag", d => {
+            .on("drag", function(event, d) {
                 // by fixing its position, this disables the forces acting on the node:
-                d.fx = d3.event.x
-                d.fy = d3.event.y
+                d.fx = event.x
+                d.fy = event.y
             })
-            .on("end", d => {
+            .on("end", function(event, d) {
                 // stop simulation:
-                if (!d3.event.active) simulation.alphaTarget(0)
+                if (!event.active) simulation.alphaTarget(0)
                 // reactivate the force on the node:
                 d.fx = null
                 d.fy = null
@@ -126,6 +126,7 @@ class ForceDirectedGraph {
   
       // Update positions
       vis.simulation.on('tick', () => {
+        //nodes.attr("transform", d => "translate(" + getNodeXCoordinate(d.x) + "," + getNodeYCoordinate(d.y) + ")")
         links
             .attr('x1', d => d.source.x)
             .attr('y1', d => d.source.y)
@@ -136,6 +137,6 @@ class ForceDirectedGraph {
             .attr('cx', d => d.x)
             .attr('cy', d => d.y);
       });
-  	    
+      
     }
   }
