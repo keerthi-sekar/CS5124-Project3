@@ -72,7 +72,8 @@ class ForceDirectedGraph {
       // Add links
       const links = vis.chart.selectAll('line')
           .data(vis.data.links, d => [d.source, d.target])
-          .join('line');
+          .join('line')
+          .attr('stroke', '#545454'); // Change this to a color scale to show how many scenes they share
   
       // Add nodes
       const nodes = vis.chart.selectAll('circle')
@@ -85,7 +86,7 @@ class ForceDirectedGraph {
       .call(d3.drag()
             .on("start", function(event, d) {
                 // heat the simulation:
-                if (!event.active) simulation.alphaTarget(0.2).restart()
+                if (!event.active) vis.simulation.alphaTarget(0.2).restart()
                 // set fixed x and y coordinates:	
                 d.fx = d.x
                 d.fy = d.y
@@ -97,7 +98,7 @@ class ForceDirectedGraph {
             })
             .on("end", function(event, d) {
                 // stop simulation:
-                if (!event.active) simulation.alphaTarget(0)
+                if (!event.active) vis.simulation.alphaTarget(0)
                 // reactivate the force on the node:
                 d.fx = null
                 d.fy = null
