@@ -9,8 +9,8 @@ class ForceDirectedGraph {
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: 800,
-        containerHeight: 600,
-        margin: {top: 15, right: 10, bottom: 15, left: 10}
+        containerHeight: 500,
+        margin: {top: 5, right: 5, bottom: 5, left: 5}
       }
       this.data = _data;
       this.initVis();
@@ -37,7 +37,7 @@ class ForceDirectedGraph {
       // Append group element that will contain our actual chart 
       // and position it according to the given margin config
       vis.chart = vis.svg.append('g')
-          .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
+          .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top+5})`);
   
       // Initialize force simulation
       vis.simulation = d3.forceSimulation()
