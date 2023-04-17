@@ -115,7 +115,7 @@ class ForceDirectedGraph {
         tooltip.transition()
             .duration(300)
             .style("opacity", 1) // show the tooltip
-        tooltip.html(d.id)
+        tooltip.html(d.id + ", " + d.group)
             .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
             .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
     })
