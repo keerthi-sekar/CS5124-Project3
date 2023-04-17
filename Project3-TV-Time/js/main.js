@@ -30,20 +30,6 @@ d3.csv('data/script.csv')
           'line': d.line
         }
 
-        /* if(count < 500)
-        {
-          des = d.line.replace('"', '');
-          des = des.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"");
-          des = des.toLowerCase();
-          des = des.split(' ');
-          for(let i = 0; i < unwanted_words.length; i++)
-          {
-            des = des.filter(f => f !== unwanted_words[i]);
-          }
-          words = words.concat(des);
-          count++;
-        } */
-
         cast.push(datapoint);
 
       }
@@ -69,13 +55,6 @@ d3.csv('data/script.csv')
 
     season_options.sort();
 
-    // console.log(episode_rollup)
-    // episode_rollup.forEach(v => {
-    //   episode_options.push("Episode " + v[0]);
-    // })
-
-    // episode_options.sort();
-
     var selectSeason = document.getElementById("seasonDropDown");
 
     for(var i = 0; i < season_options.length; i++) {
@@ -85,16 +64,6 @@ d3.csv('data/script.csv')
         el.value = opt;
         selectSeason.appendChild(el);
     }
-    
-    // var selectEpisode = document.getElementById("episodeDropDown");
-
-    // for(var i = 0; i < episode_options.length; i++) {
-    //     var opt = episode_options[i];
-    //     var el = document.createElement("option");
-    //     el.textContent = opt;
-    //     el.value = opt;
-    //     selectEpisode.appendChild(el);
-    // }
 
     var window_width = window.innerWidth;
     barchartA = new Barchart({
