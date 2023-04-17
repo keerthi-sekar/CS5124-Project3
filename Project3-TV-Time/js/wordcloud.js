@@ -105,6 +105,19 @@ class WordCloud {
 
         vis.fontScale = 70 / Math.sqrt(vis.wordData[0].value);
 
+        // create tooltip element  
+        const tooltip = d3.select("body")
+            .append("div")
+                .style("position", "absolute")
+                .style("z-index", "10")
+                .style("visibility", "hidden")
+                .style("padding", "2px 8px")
+                .style("background", "#fff")
+                .style("border", "1px solid #ddd")
+                .style("box-shadow", "2px 2px 3px 0px rgb(92 92 92 / 0.5)")
+                .style("font-size", "12px")
+                .style("font-weight", "600");
+
         vis.w_cloud = d3.layout.cloud()
             .size([vis.width, vis.height])
             .words(vis.wordData.map((d) => Object.create(d)))
@@ -120,7 +133,26 @@ class WordCloud {
                 .attr("transform", `translate(${x},${y}) rotate(${rotate})`)
                 .style("fill", function(d) { return vis.colors(Math.pow(size/vis.fontScale,2)); })
                 .text(text)
-                //.on("click", handleClick);
+                .on('mouseover', (event,d) => {
+                    let val = Math.round(Math.pow((size / (70 / Math.sqrt(vis.wordData[0].value))),2));
+                      tooltip.html(`
+                        <div class="tooltip-title">"${text}" was said ${val} times</div>
+                      `).style("visibility", "visible");
+                  })
+                  .on("mousemove", function(){
+                    tooltip
+                      .style("top", (event.pageY-10)+"px")
+                      .style("left",(event.pageX+10)+"px");
+                  })
+                  .on('mouseleave', () => {
+                    tooltip.html(``).style("visibility", "hidden");
+                  })
+                  .on('click', () => {
+                    tooltip.html(``).style("visibility", "hidden");
+                    searchPhrase = text;
+                    document.getElementById("phraseSearch").value = text;
+                    filterData();
+                  })
             });
     vis.w_cloud.start();
     }

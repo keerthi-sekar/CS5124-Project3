@@ -7,6 +7,7 @@ let characterFilter = [];
 let cast = [];
 let words = [];
 let count = 0;
+let searchPhrase = "";
 
 //season,episode,character,line
 d3.csv('data/script.csv')
@@ -20,8 +21,8 @@ d3.csv('data/script.csv')
         d.line = d.line;
 
         if(d.character == "Eleanor Shellstrop" || d.character == "Michael" || d.character == "Tahani Al-Jamil" ||
-      d.character == "Janet" || d.character == "Jason Mendoza" || d.character == "Chidi Anagonye"
-      || d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" ||d.character == "Trevor")
+          d.character == "Janet" || d.character == "Jason Mendoza" || d.character == "Chidi Anagonye" || 
+          d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" || d.character == "Trevor")
       {
         var datapoint = {
           'season': d.season,
@@ -125,17 +126,24 @@ d3.csv('data/script.csv')
     filterData();
   })
 
+  function onSearch(val) {
+    searchPhrase = val;
+    filterData();
+  }
+
   function clearFilters() {
     episodeFilter = [];
     characterFilter = [];
     selectedOption = "All Seasons"
     document.getElementById("seasonDropDown").value = "All Seasons"
+    searchPhrase = "";
+    document.getElementById("phraseSearch").value = "";
     filterData();
   }
 
   function filterData() {
     var filteredData = cast;
-    if (episodeFilter.length == 0 && characterFilter.length == 0 && selectedOption == "All Seasons") {
+    if (episodeFilter.length == 0 && characterFilter.length == 0 && selectedOption == "All Seasons" && searchPhrase == "") {
       console.log("remove filter")
       // Disable Remove Filter btn
       document.getElementById("btn").disabled = true
@@ -159,6 +167,22 @@ d3.csv('data/script.csv')
         filteredData = filteredData.filter(v => v.character == charName)
       })
       console.log(filteredData)
+    }
+    if(searchPhrase != "") {
+      var phraseData = [];
+      filteredData.forEach(val => {
+        if(val.line.toLowerCase().includes(searchPhrase.toLowerCase())) {
+          phraseData.push(val)
+        }
+      })
+      if(phraseData.length != 0) {
+        filteredData = phraseData;
+      }
+      else {
+        document.getElementById("phraseSearch").value = "";
+        searchPhrase = "";
+        alert("Phrase not found");
+      }
     }
     var character_rollup_tmp = d3.rollups(filteredData, v => v.length, d => d.character);
     character_rollup_tmp = character_rollup_tmp.sort(function(a, b){ return d3.descending(a[1], b[1]); })
