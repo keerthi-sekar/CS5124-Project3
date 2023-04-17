@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    { "id": "Eleanor", "group": 1 },
+    { "id": "Chidi", "group": 1 },
+    { "id": "Tahani", "group": 1 },
+    { "id": "Jason", "group": 1 },
+    { "id": "Janet", "group": 2 },
+    { "id": "Michael", "group": 3 },
+    { "id": "Shawn", "group": 3 },
+    { "id": "Mindy", "group": 1 },
+    { "id": "Derek", "group": 2 },
+    { "id": "Trevor", "group": 3 },
+    { "id": "Simone", "group": 1 }
+  ],
+  "links": [
+    { "source": "Eleanor", "target": "Chidi", "value": 1 },
+    { "source": "Chidi", "target": "Eleanor", "value": 1 },
+    { "source": "Tahani", "target": "Jason", "value": 1 },
+    { "source": "Jason", "target": "Janet", "value": 1 },
+    { "source": "Janet", "target": "Jason", "value": 1 },
+    { "source": "Michael", "target": "Janet", "value": 2 },
+    { "source": "Michael", "target": "Eleanor", "value": 2 },
+    { "source": "Michael", "target": "Chidi", "value": 2 },
+    { "source": "Michael", "target": "Tahani", "value": 2 },
+    { "source": "Eleanor", "target": "Jason", "value": 1 },
+    { "source": "Chidi", "target": "Tahani", "value": 1 },
+    { "source": "Shawn", "target": "Michael", "value": 3 },
+    { "source": "Mindy", "target": "Derek", "value": 1 },
+    { "source": "Trevor", "target": "Chidi", "value": 3 },
+    { "source": "Simone", "target": "Chidi", "value": 1 },
+    { "source": "Simone", "target": "Eleanor", "value": 1 }
+  ]
+}
