@@ -22,6 +22,7 @@ body {
     margin: 12px;
     padding: 12px;
     font-size: 20px;
+    height: fit-content;
 }
 
 #tooltip {
@@ -59,11 +60,6 @@ div.tooltip {
     pointer-events: none; /* keep the mouseover when over the tooltip */
   }
 
-table
-{
-    width: 400px;
-    font: 19px;
-}
 table, th, td
 {
     border: solid 2px #D1D3D5;
@@ -74,4 +70,14 @@ img
 {
     width: 45%;
     align-content: center;
+}
+
+.bar:hover {
+    stroke: #E4D00A;
+    stroke-width: 5px;
+}
+
+.bar.active {
+    stroke: #E4D00A;
+    stroke-width: 5px;
 }

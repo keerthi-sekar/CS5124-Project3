@@ -5,17 +5,17 @@ class Barchart {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data, _map) {
+    constructor(_config, _data, _map, _width) {
       // Configuration object with defaults
       this.config = {
         parentElement: _config.parentElement,
-        containerWidth: _config.containerWidth || 550,
-        containerHeight: _config.containerHeight || 650,
+        containerWidth: _config.containerWidth || _width,
+        containerHeight: _config.containerHeight || 466,
         margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 40},
         reverseOrder: _config.reverseOrder || false,
         tooltipPadding: _config.tooltipPadding || 15,
-        xAxisTitle: _config.xAxisTitle || ' ',
-        yAxisTitle: _config.yAxisTitle || ' ',
+        xAxisTitle: _config.xAxisTitle
+        // yAxisTitle: _config.yAxisTitle || ' ',
       }
       this.data = _data;
       this.num_map = _map;
@@ -76,14 +76,18 @@ class Barchart {
           .attr('y', -10)
           .attr('dy', '.71em')
           .text(vis.config.yAxisTitle);
+
+      // Color scale for month/day
+      vis.colorScale = d3.scaleOrdinal().range(d3.schemeCategory10)
+      .domain(["1","2","3","4"]);
   
-      vis.chart.append('text') //x-axis = radius [dist]
-      .attr('class', 'axis-title')
-      .attr('y', vis.height + 25)
-      .attr('x', vis.width + 5)
-      .attr('dy', '.71em')
-      .style('text-anchor', 'end')
-      .text(vis.config.xAxisTitle);
+      // vis.chart.append('text') //x-axis = radius [dist]
+      // .attr('class', 'axis-title')
+      // .attr('y', vis.height + 25)
+      // .attr('x', vis.width + 5)
+      // .attr('dy', '.71em')
+      // .style('text-anchor', 'end')
+      // .text(vis.config.xAxisTitle);
     }
   
     /**
@@ -113,6 +117,8 @@ class Barchart {
       // Set the scale input domains
       vis.xScale.domain(vis.aggregatedData.map(vis.xValue));
       vis.yScale.domain([0, d3.max(vis.aggregatedData, vis.yValue)]);
+
+      vis.colorValue = d => d.key < 14 ? "1" : d.key < 27 ? "2" : d.key < 40 ? "3" : "4";
   
       vis.renderVis();
     }
@@ -122,39 +128,107 @@ class Barchart {
      */
     renderVis() {
       let vis = this;
+
+      // create tooltip element  
+      const tooltip = d3.select("body")
+        .append("div")
+        .style("position", "absolute")
+        .style("z-index", "10")
+        .style("visibility", "hidden")
+        .style("padding", "2px 8px")
+        .style("background", "#fff")
+        .style("border", "1px solid #ddd")
+        .style("width", "150px")
+        .style("box-shadow", "2px 2px 3px 0px rgb(92 92 92 / 0.5)")
+        .style("font-size", "12px")
+        .style("font-weight", "600");
   
       // Add rectangles
-      const bars = vis.chart.selectAll('.bar')
+      vis.bars = vis.chart.selectAll('.bar')
           .data(vis.aggregatedData, vis.xValue)
         .join('rect')
-          .attr('class', 'bar')
+          .attr('class',  d => (episodeFilter.find(e => e === d.key) || characterFilter.find(e => e === d.key) ? 'bar active' : "bar"))
           .attr('x', d => vis.xScale(vis.xValue(d)))
           .attr('width', vis.xScale.bandwidth())
           .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
           .attr('y', d => vis.yScale(vis.yValue(d)))
-          .attr('fill', '#2962dd')
+          // .attr('fill', '#2962dd')
+          .attr('fill', vis.config.xAxisTitle == "Characters" ? '#2962dd' : d => vis.colorScale(vis.colorValue(d)))
   
-      bars
+      vis.bars
         .on('mouseover', (event,d) => {
-          d3.select('#tooltip')
-            .style('display', 'block')
-            .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
-            .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
-            .html(`
-              <div class="tooltip-title">${vis.config.xAxisTitle}: ${d.key}</div>
-              <div><i>Exoplanets: ${d.count}</i></div>
-            `);
+          if(vis.config.xAxisTitle == "Episodes") {
+            var season = d.key < 14 ? 1 : d.key < 27 ? 2 : d.key < 40 ? 3 : 4;
+            var episode = season == 1 ? d.key : season == 2 ? d.key - 13 : season == 3 ? d.key - 26 : d.key - 39
+            tooltip.html(`
+            <div class="tooltip-title">Season: ${season}</div>
+            <div class="tooltip-title">Episode: ${episode}</div>
+            <div class="tooltip-label">Number of lines: ${d.count}</div>
+          `).style("visibility", "visible");
+          }
+          else if(vis.config.xAxisTitle == "Characters") {
+            tooltip.html(`
+                <div class="tooltip-title">Character: ${d.key}</div>
+                <div class="tooltip-label">Number of lines: ${d.count}</div>
+              `).style("visibility", "visible");
+          }
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
         })
         .on('mouseleave', () => {
-          d3.select('#tooltip').style('display', 'none');
+          // d3.select('#tooltip').style('display', 'none');
+          tooltip.html(``).style("visibility", "hidden");
         });
-      // Update axes
-      vis.xAxisG.call(vis.xAxis)
-          .selectAll("text")  
+
+        vis.bars.on('click', function(event, d) {
+          if(vis.config.xAxisTitle == "Episodes") {
+            tooltip.html(``).style("visibility", "hidden");
+            var isActive = false
+            isActive = episodeFilter.find(e => e === d.key) // Check if selected episode is already applied
+
+            if (isActive) {
+              d3.select(this).attr("class", "bar");
+              // Remove from filter
+              episodeFilter = episodeFilter.filter(f => f !== isActive);
+            } else {
+              d3.select(this).attr("class", "bar active");
+              // Add to filter
+              episodeFilter.push(d.key)
+            }
+            filterData(); // Call global function to update charts
+          }
+          else if(vis.config.xAxisTitle == "Characters")  {
+            tooltip.html(``).style("visibility", "hidden");
+            var isActive = false
+            isActive = characterFilter.find(e => e === d.key) // Check selected character is already applied
+
+            if (isActive) {
+              d3.select(this).attr("class", "bar");
+              // Remove from filter
+              characterFilter = characterFilter.filter(f => f !== isActive);
+            } else {
+              d3.select(this).attr("class", "bar active");
+              // Add to filter
+              characterFilter.push(d.key)
+            }
+            filterData(); // Call global function to update charts
+          }
+        });
+
+      console.log(vis.config.xAxisTitle)
+      if(vis.config.xAxisTitle == "Characters") {
+        vis.xAxisG.call(vis.xAxis).selectAll("text")  
           .style("text-anchor", "end")
           .attr("dx", "-.8em")
           .attr("dy", ".15em")
           .attr("transform", "rotate(-65)");
+      }
+      else {
+        vis.xAxisG.call(vis.xAxis)
+      }
 
       vis.yAxisG.call(vis.yAxis);
     }
