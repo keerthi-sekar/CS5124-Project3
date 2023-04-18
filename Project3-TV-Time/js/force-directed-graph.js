@@ -124,7 +124,7 @@ class ForceDirectedGraph {
         tooltip.transition()
             .duration(300)
             .style("opacity", 1) // show the tooltip
-        tooltip.html(d.id + ", " + d.group)
+        tooltip.html(d.id + ", Group: " + d.group)
             .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
             .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
     })
@@ -133,6 +133,21 @@ class ForceDirectedGraph {
             .duration(200)
             .style("opacity", 0)
     })
+
+    links
+        .on("mouseover", function(event, d) {
+        tooltip.transition()
+            .duration(300)
+            .style("opacity", 1) // show the tooltip
+        tooltip.html("Value: " + d.value)
+            .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
+            .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
+    })
+    /* .on("mouseleave", function(d) {
+        tooltip.transition()
+            .duration(200)
+            .style("opacity", 0)
+    }) */
   
       // Update positions
       vis.simulation.on('tick', () => {
