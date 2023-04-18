@@ -90,7 +90,12 @@ d3.csv('data/script.csv')
   .catch(error => console.error(error));
 
   d3.json('data/thegoodplace.json').then(data => {
-    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data);
+    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data, '#chart5');
+  })
+  .catch(error => console.error(error));
+
+  d3.json('data/miserables.json').then(data => {
+    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chartexample'}, data, '#chartexample');
   })
   .catch(error => console.error(error));
 

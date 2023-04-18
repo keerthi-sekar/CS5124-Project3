@@ -13,7 +13,7 @@ class ForceDirectedGraph {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data) {
+    constructor(_config, _data, _chartname) {
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: 800,
@@ -21,6 +21,7 @@ class ForceDirectedGraph {
         margin: {top: 5, right: 5, bottom: 5, left: 5}
       }
       this.data = _data;
+      this.chartname = _chartname;
       this.initVis();
     }
     
@@ -114,7 +115,7 @@ class ForceDirectedGraph {
   	    );
 
      // tooltip div:
-  const tooltip = d3.select('#chart5').append("div")
+  const tooltip = d3.select(this.chartname).append("div")
     .classed("tooltip", true)
     .style("opacity", 0) // start invisible
 
