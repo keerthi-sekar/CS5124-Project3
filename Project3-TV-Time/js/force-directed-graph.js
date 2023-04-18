@@ -1,3 +1,11 @@
+/* 
+Note that the "group" property of each node represents a category to which the character belongs. The categories are as follows:
+Group 1: Main characters
+Group 2: Non-human entities
+Group 3: Afterlife administrators 
+The "value" property of each link represents the strength of the relationship between the characters, with a higher value indicating a stronger relationship.
+*/
+
 class ForceDirectedGraph {
 
     /**
