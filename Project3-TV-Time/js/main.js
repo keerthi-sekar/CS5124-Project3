@@ -1,4 +1,4 @@
-let data, barchartA, barchartB, wordcloud, character_rollup, episode_rollup;
+let data, barchartA, barchartB, wordcloud, character_rollup, episode_rollup, forceDirectedGraph;
 let selectedOption = "All Seasons"
 let season_options = ["All Seasons"];
 // let episode_options = ["All Episodes"];
@@ -22,7 +22,8 @@ d3.csv('data/script.csv')
 
         if(d.character == "Eleanor Shellstrop" || d.character == "Michael" || d.character == "Tahani Al-Jamil" ||
           d.character == "Janet" || d.character == "Jason Mendoza" || d.character == "Chidi Anagonye" || 
-          d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" || d.character == "Trevor")
+          d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" || d.character == "Trevor" ||
+          d.character == "Mindy St. Claire" || d.character == "Doug Forcett" || d.character == "Judge")
       {
         var datapoint = {
           'season': d.season,
@@ -85,19 +86,23 @@ d3.csv('data/script.csv')
       parentElement: '#chart4'
     }, data)
     wordcloud.updateVis(data);
+
+    var forceData = getForceDataJson(data);
+    forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, forceData, '#chart5');
  
   })
   .catch(error => console.error(error));
 
-  d3.json('data/thegoodplace.json').then(data => {
-    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data, '#chart5');
-  })
-  .catch(error => console.error(error));
+  // d3.json('data/thegoodplace.json').then(data => {
+  //   console.log(data)
+  //   const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data, '#chart5');
+  // })
+  // .catch(error => console.error(error));
 
-  d3.json('data/miserables.json').then(data => {
-    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chartexample'}, data, '#chartexample');
-  })
-  .catch(error => console.error(error));
+  // d3.json('data/miserables.json').then(data => {
+  //   const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chartexample'}, data, '#chartexample');
+  // })
+  // .catch(error => console.error(error));
 
   d3.select("#seasonDropDown").on("change", function(d) {
     // set the option that has been chosen
@@ -177,4 +182,60 @@ d3.csv('data/script.csv')
     barchartB.updateVis();
 
     wordcloud.updateVis(filteredData);
+
+    var forceData = getForceDataJson(filteredData);
+    forceDirectedGraph.nodes.remove();
+    forceDirectedGraph.links.remove();
+    forceDirectedGraph.data = forceData;
+    forceDirectedGraph.updateVis();
+  }
+
+  function getForceDataJson(localData) {
+    var chars = ["Eleanor", "Michael", "Tahani", "Janet", "Jason", "Chidi", "Shawn", "Simone", "Derek", "Trevor", "Mindy", "Doug", "Glenn", "Judge", "Bad Janet"]
+    var relations = [];
+    localData.forEach(val => {
+      chars.forEach(char => {
+        if(val.character.includes(char)) {
+          const containsString = chars.find(str => val.line.toLowerCase().includes(str.toLowerCase()));
+          if(containsString && !containsString.includes(char)) {
+            var objectToUpdate = relations.find(obj => obj.source === char && obj.target === containsString);
+            if(!objectToUpdate) {
+              objectToUpdate = relations.find(obj => obj.source === containsString && obj.target === char);
+            }
+            if(objectToUpdate) {
+              objectToUpdate.value = objectToUpdate.value + 1
+            }
+            else {
+              var obj = {"source": char, "target": containsString, "value": 1}
+              relations.push(obj)
+            }
+          }
+        }
+      })
+    })
+
+    relations = relations.filter(obj => obj.value > 15);
+
+    var nodes = [
+      {"id": "Eleanor", "group": 1},
+      {"id": "Chidi", "group": 1},
+      {"id": "Tahani", "group": 1},
+      {"id": "Jason", "group": 1},
+      {"id": "Michael", "group": 2},
+      {"id": "Janet", "group": 2},
+      {"id": "Shawn", "group": 2},
+      {"id": "Trevor", "group": 3},
+      {"id": "Simone", "group": 4},
+      {"id": "Derek", "group": 5},
+      {"id": "Mindy", "group": 5},
+      {"id": "Doug", "group": 6},
+      {"id": "Judge", "group": 6}
+    ];
+
+    var jsonData = {
+      "nodes": nodes,
+      "links": relations
+    }
+    return jsonData;
+
   }

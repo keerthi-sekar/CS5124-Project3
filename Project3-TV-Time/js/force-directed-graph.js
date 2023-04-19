@@ -62,6 +62,11 @@ class ForceDirectedGraph {
      */
     updateVis() {
       let vis = this;
+
+      vis.simulation = d3.forceSimulation()
+      .force('link', d3.forceLink().id(d => d.id))
+      .force('charge', d3.forceManyBody())
+      .force('center', d3.forceCenter(vis.config.width / 2, vis.config.height / 2));
   
       // Add node-link data to simulation
       vis.simulation.nodes(vis.data.nodes);
@@ -79,19 +84,19 @@ class ForceDirectedGraph {
       let vis = this;
   
       // Add links
-      const links = vis.chart.selectAll('line')
+      vis.links = vis.chart.selectAll('line')
           .data(vis.data.links, d => [d.source, d.target])
           .join('line')
           .attr('stroke', '#545454'); // Change this to a color scale to show how many scenes they share
   
       // Add nodes
-      const nodes = vis.chart.selectAll('circle')
+      vis.nodes = vis.chart.selectAll('circle')
           .data(vis.data.nodes, d => d.id)
         .join('circle')
           .attr('r', 5)
           .attr('fill', d => vis.colorScale(d.id));
       
-      nodes
+      vis.nodes
       .call(d3.drag()
             .on("start", function(event, d) {
                 // heat the simulation:
@@ -114,51 +119,56 @@ class ForceDirectedGraph {
             })
   	    );
 
-     // tooltip div:
-  const tooltip = d3.select(this.chartname).append("div")
-    .classed("tooltip", true)
-    .style("opacity", 0) // start invisible
+    // create tooltip element  
+    const tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("visibility", "hidden")
+      .style("padding", "2px 8px")
+      .style("background", "#fff")
+      .style("border", "1px solid #ddd")
+      .style("width", "150px")
+      .style("box-shadow", "2px 2px 3px 0px rgb(92 92 92 / 0.5)")
+      .style("font-size", "12px")
+      .style("font-weight", "600");
 
-    nodes
+    vis.nodes
         .on("mouseover", function(event, d) {
-        tooltip.transition()
-            .duration(300)
-            .style("opacity", 1) // show the tooltip
-        tooltip.html(d.id + ", Group: " + d.group)
-            .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
-            .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
-    })
-    .on("mouseleave", function(d) {
-        tooltip.transition()
-            .duration(200)
-            .style("opacity", 0)
-    })
+          tooltip.html(d.id + ", Group: " + d.group).style("visibility", "visible");
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseleave", function(d) {
+          tooltip.html(``).style("visibility", "hidden");
+        })
 
-    links
+    vis.links
         .on("mouseover", function(event, d) {
-        tooltip.transition()
-            .duration(300)
-            .style("opacity", 1) // show the tooltip
-        tooltip.html("Value: " + d.value)
-            .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
-            .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
-    })
-    /* .on("mouseleave", function(d) {
-        tooltip.transition()
-            .duration(200)
-            .style("opacity", 0)
-    }) */
+          tooltip.html(d.source.id + " shared " + d.value + " scenes with " + d.target.id).style("visibility", "visible");
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseleave", function(d) {
+          tooltip.html(``).style("visibility", "hidden");
+        })
   
       // Update positions
       vis.simulation.on('tick', () => {
         //nodes.attr("transform", d => "translate(" + getNodeXCoordinate(d.x) + "," + getNodeYCoordinate(d.y) + ")")
-        links
+        vis.links
             .attr('x1', d => d.source.x)
             .attr('y1', d => d.source.y)
             .attr('x2', d => d.target.x)
             .attr('y2', d => d.target.y);
   
-        nodes
+        vis.nodes
             .attr('cx', d => d.x)
             .attr('cy', d => d.y);
       });
