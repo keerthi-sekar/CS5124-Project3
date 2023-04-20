@@ -1,4 +1,4 @@
-let data, barchartA, barchartB, wordcloud, character_rollup, episode_rollup;
+let data, barchartA, barchartB, wordcloud, character_rollup, episode_rollup, forceDirectedGraph;
 let selectedOption = "All Seasons"
 let season_options = ["All Seasons"];
 // let episode_options = ["All Episodes"];
@@ -22,7 +22,8 @@ d3.csv('data/script.csv')
 
         if(d.character == "Eleanor Shellstrop" || d.character == "Michael" || d.character == "Tahani Al-Jamil" ||
           d.character == "Janet" || d.character == "Jason Mendoza" || d.character == "Chidi Anagonye" || 
-          d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" || d.character == "Trevor")
+          d.character == "Shawn" || d.character == "Simone Garnett" || d.character == "Derek Hofstetler" || d.character == "Trevor" ||
+          d.character == "Mindy St. Claire" || d.character == "Doug Forcett" || d.character == "Judge")
       {
         var datapoint = {
           'season': d.season,
@@ -85,18 +86,29 @@ d3.csv('data/script.csv')
       parentElement: '#chart4'
     }, data)
     wordcloud.updateVis(data);
+
+    var forceData = getForceDataJson(data);
+    forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, forceData, '#chart5');
  
   })
   .catch(error => console.error(error));
 
-  d3.json('data/miserables.json').then(data => {
-    const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data);
-  })
-  .catch(error => console.error(error));
+  // d3.json('data/thegoodplace.json').then(data => {
+  //   console.log(data)
+  //   const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chart5'}, data, '#chart5');
+  // })
+  // .catch(error => console.error(error));
+
+  // d3.json('data/miserables.json').then(data => {
+  //   const forceDirectedGraph = new ForceDirectedGraph({ parentElement: '#chartexample'}, data, '#chartexample');
+  // })
+  // .catch(error => console.error(error));
 
   d3.select("#seasonDropDown").on("change", function(d) {
     // set the option that has been chosen
     selectedOption = d3.select(this).property("value");
+    episodeFilter = [];
+    characterFilter = [];
     filterData();
   })
 
@@ -172,4 +184,75 @@ d3.csv('data/script.csv')
     barchartB.updateVis();
 
     wordcloud.updateVis(filteredData);
+
+    var forceData = getForceDataJson(filteredData);
+    forceDirectedGraph.nodes.remove();
+    forceDirectedGraph.links.remove();
+    forceDirectedGraph.data = forceData;
+    forceDirectedGraph.updateVis();
+  }
+
+  function getForceDataJson(localData) {
+    var chars = ["Eleanor", "Michael", "Tahani", "Janet", "Jason", "Chidi", "Shawn", "Simone", "Derek", "Trevor", "Mindy", "Doug", "Judge", "Bad Janet"]
+    var relations = [];
+    localData.forEach(val => {
+      chars.forEach(char => {
+        if(val.character.includes(char)) {
+          const containsString = chars.find(str => val.line.includes(str));
+          if(containsString && !containsString.includes(char)) {
+            var objectToUpdate = relations.find(obj => obj.source === char && obj.target === containsString);
+            if(!objectToUpdate) {
+              objectToUpdate = relations.find(obj => obj.source === containsString && obj.target === char);
+            }
+            if(objectToUpdate) {
+              objectToUpdate.value = objectToUpdate.value + 1
+            }
+            else {
+              var obj = {"source": char, "target": containsString, "value": 1}
+              relations.push(obj)
+            }
+          }
+        }
+      })
+    })
+
+    if(relations.length > 1) {
+      const maxIdObject = relations.reduce((acc, curr) => {
+        return acc.value > curr.value ? acc : curr;
+      });
+      console.log(maxIdObject.value)
+      if(maxIdObject.value > 200) {
+        relations = relations.filter(obj => obj.value > 15);
+      }
+      else if(maxIdObject.value > 80) {
+        relations = relations.filter(obj => obj.value > 10);
+      }
+      else if(maxIdObject.value > 40) {
+        relations = relations.filter(obj => obj.value > 5);
+      }
+    }
+    
+
+    var nodes = [];
+
+     if (relations.find(obj => obj.source === "Eleanor" || obj.target === "Eleanor")) nodes.push({"id": "Eleanor", "group": 1})
+     if (relations.find(obj => obj.source === "Chidi" || obj.target === "Chidi")) nodes.push({"id": "Chidi", "group": 1})
+     if (relations.find(obj => obj.source === "Tahani" || obj.target === "Tahani")) nodes.push({"id": "Tahani", "group": 1})
+     if (relations.find(obj => obj.source === "Jason" || obj.target === "Jason")) nodes.push({"id": "Jason", "group": 1})
+     if (relations.find(obj => obj.source === "Michael" || obj.target === "Michael")) nodes.push({"id": "Michael", "group": 2})
+     if (relations.find(obj => obj.source === "Janet" || obj.target === "Janet")) nodes.push({"id": "Janet", "group": 2})
+     if (relations.find(obj => obj.source === "Shawn" || obj.target === "Shawn")) nodes.push({"id": "Shawn", "group": 2})
+     if (relations.find(obj => obj.source === "Trevor" || obj.target === "Trevor")) nodes.push({"id": "Trevor", "group": 3})
+     if (relations.find(obj => obj.source === "Simone" || obj.target === "Simone")) nodes.push({"id": "Simone", "group": 4})
+     if (relations.find(obj => obj.source === "Derek" || obj.target === "Derek")) nodes.push({"id": "Derek", "group": 5})
+     if (relations.find(obj => obj.source === "Mindy" || obj.target === "Mindy")) nodes.push({"id": "Mindy", "group": 5})
+     if (relations.find(obj => obj.source === "Doug" || obj.target === "Doug")) nodes.push({"id": "Doug", "group": 6})
+     if (relations.find(obj => obj.source === "Judge" || obj.target === "Judge")) nodes.push({"id": "Judge", "group": 6})
+
+    var jsonData = {
+      "nodes": nodes,
+      "links": relations
+    }
+    return jsonData;
+
   }

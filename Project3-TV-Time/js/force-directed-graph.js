@@ -1,3 +1,11 @@
+/* 
+Note that the "group" property of each node represents a category to which the character belongs. The categories are as follows:
+Group 1: Main characters
+Group 2: Non-human entities
+Group 3: Afterlife administrators 
+The "value" property of each link represents the strength of the relationship between the characters, with a higher value indicating a stronger relationship.
+*/
+
 class ForceDirectedGraph {
 
     /**
@@ -5,7 +13,7 @@ class ForceDirectedGraph {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data) {
+    constructor(_config, _data, _chartname) {
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: 800,
@@ -13,6 +21,7 @@ class ForceDirectedGraph {
         margin: {top: 5, right: 5, bottom: 5, left: 5}
       }
       this.data = _data;
+      this.chartname = _chartname;
       this.initVis();
     }
     
@@ -27,8 +36,10 @@ class ForceDirectedGraph {
       vis.config.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
   
       // Initialize scales
-      vis.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-  
+      vis.colorScale = d3.scaleOrdinal().range(["#6929c4", "#1192e8", "#808080", "#9f1853", "#198038", "#570408", "#002d9c", "#b28600", "#fa4d56", "#CC8B86", "#009d9a","#a56eff", "#FFA630"])
+      .domain(["Eleanor", "Chidi", "Tahani", "Jason", "Michael", "Janet", "Shawn", "Trevor", "Simone", "Derek", "Mindy", "Doug", "Judge"]);
+
+
       // Define size of SVG drawing area
       vis.svg = d3.select(vis.config.parentElement).append('svg')
           .attr('width', vis.config.containerWidth)
@@ -53,12 +64,17 @@ class ForceDirectedGraph {
      */
     updateVis() {
       let vis = this;
+
+      vis.simulation = d3.forceSimulation()
+      .force('link', d3.forceLink().id(d => d.id))
+      .force('charge', d3.forceManyBody())
+      .force('center', d3.forceCenter(vis.config.width / 2, vis.config.height / 2));
   
       // Add node-link data to simulation
       vis.simulation.nodes(vis.data.nodes);
       vis.simulation.force('link').links(vis.data.links);
   
-      vis.colorScale.domain(vis.data.nodes.map(d => d.group));
+      // vis.colorScale.domain(vis.data.nodes.map(d => d.group));
       
       vis.renderVis();
     }
@@ -70,19 +86,19 @@ class ForceDirectedGraph {
       let vis = this;
   
       // Add links
-      const links = vis.chart.selectAll('line')
+      vis.links = vis.chart.selectAll('line')
           .data(vis.data.links, d => [d.source, d.target])
           .join('line')
           .attr('stroke', '#545454'); // Change this to a color scale to show how many scenes they share
   
       // Add nodes
-      const nodes = vis.chart.selectAll('circle')
+      vis.nodes = vis.chart.selectAll('circle')
           .data(vis.data.nodes, d => d.id)
         .join('circle')
           .attr('r', 5)
           .attr('fill', d => vis.colorScale(d.id));
       
-      nodes
+      vis.nodes
       .call(d3.drag()
             .on("start", function(event, d) {
                 // heat the simulation:
@@ -105,36 +121,56 @@ class ForceDirectedGraph {
             })
   	    );
 
-     // tooltip div:
-  const tooltip = d3.select('#chart5').append("div")
-    .classed("tooltip", true)
-    .style("opacity", 0) // start invisible
+    // create tooltip element  
+    const tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("visibility", "hidden")
+      .style("padding", "2px 8px")
+      .style("background", "#fff")
+      .style("border", "1px solid #ddd")
+      .style("width", "150px")
+      .style("box-shadow", "2px 2px 3px 0px rgb(92 92 92 / 0.5)")
+      .style("font-size", "12px")
+      .style("font-weight", "600");
 
-    nodes
+    vis.nodes
         .on("mouseover", function(event, d) {
-        tooltip.transition()
-            .duration(300)
-            .style("opacity", 1) // show the tooltip
-        tooltip.html(d.id + ", " + d.group)
-            .style("left", (event.pageX - d3.select('.tooltip').node().offsetWidth - 5) + "px")
-            .style("top", (event.pageY - d3.select('.tooltip').node().offsetHeight) + "px");
-    })
-    .on("mouseleave", function(d) {
-        tooltip.transition()
-            .duration(200)
-            .style("opacity", 0)
-    })
+          tooltip.html(d.id + ", Group: " + d.group).style("visibility", "visible");
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseleave", function(d) {
+          tooltip.html(``).style("visibility", "hidden");
+        })
+
+    vis.links
+        .on("mouseover", function(event, d) {
+          tooltip.html(d.source.id + " shared " + d.value + " scenes with " + d.target.id).style("visibility", "visible");
+        })
+        .on("mousemove", function(){
+          tooltip
+            .style("top", (event.pageY-10)+"px")
+            .style("left",(event.pageX+10)+"px");
+        })
+        .on("mouseleave", function(d) {
+          tooltip.html(``).style("visibility", "hidden");
+        })
   
       // Update positions
       vis.simulation.on('tick', () => {
         //nodes.attr("transform", d => "translate(" + getNodeXCoordinate(d.x) + "," + getNodeYCoordinate(d.y) + ")")
-        links
+        vis.links
             .attr('x1', d => d.source.x)
             .attr('y1', d => d.source.y)
             .attr('x2', d => d.target.x)
             .attr('y2', d => d.target.y);
   
-        nodes
+        vis.nodes
             .attr('cx', d => d.x)
             .attr('cy', d => d.y);
       });
