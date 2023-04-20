@@ -78,8 +78,11 @@ class Barchart {
           .text(vis.config.yAxisTitle);
 
       // Color scale for month/day
-      vis.colorScale = d3.scaleOrdinal().range(d3.schemeCategory10)
+      vis.colorScaleEp = d3.scaleOrdinal().range(d3.schemeCategory10)
       .domain(["1","2","3","4"]);
+
+      vis.colorScaleCh = d3.scaleOrdinal().range(["#6929c4", "#1192e8", "#808080", "#9f1853", "#198038", "#570408", "#002d9c", "#b28600", "#fa4d56", "#CC8B86", "#009d9a","#a56eff", "#FFA630"])
+      .domain(["Eleanor", "Chidi", "Tahani", "Jason", "Michael", "Janet", "Shawn", "Trevor", "Simone", "Derek", "Mindy", "Doug", "Judge"]);
   
       // vis.chart.append('text') //x-axis = radius [dist]
       // .attr('class', 'axis-title')
@@ -118,7 +121,8 @@ class Barchart {
       vis.xScale.domain(vis.aggregatedData.map(vis.xValue));
       vis.yScale.domain([0, d3.max(vis.aggregatedData, vis.yValue)]);
 
-      vis.colorValue = d => d.key < 14 ? "1" : d.key < 27 ? "2" : d.key < 40 ? "3" : "4";
+      vis.colorValueEp = d => d.key < 14 ? "1" : d.key < 27 ? "2" : d.key < 40 ? "3" : "4";
+      vis.colorValueCh = d => d.key.includes(" ") ? d.key.substring(0, d.key.indexOf(' ')) : d.key;
   
       vis.renderVis();
     }
@@ -153,7 +157,7 @@ class Barchart {
           .attr('height', d => vis.height - vis.yScale(vis.yValue(d)))
           .attr('y', d => vis.yScale(vis.yValue(d)))
           // .attr('fill', '#2962dd')
-          .attr('fill', vis.config.xAxisTitle == "Characters" ? '#2962dd' : d => vis.colorScale(vis.colorValue(d)))
+          .attr('fill', vis.config.xAxisTitle == "Characters" ? d => vis.colorScaleCh(vis.colorValueCh(d)) : d => vis.colorScaleEp(vis.colorValueEp(d)))
   
       vis.bars
         .on('mouseover', (event,d) => {

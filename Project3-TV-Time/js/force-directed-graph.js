@@ -36,8 +36,10 @@ class ForceDirectedGraph {
       vis.config.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
   
       // Initialize scales
-      vis.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-  
+      vis.colorScale = d3.scaleOrdinal().range(["#6929c4", "#1192e8", "#808080", "#9f1853", "#198038", "#570408", "#002d9c", "#b28600", "#fa4d56", "#CC8B86", "#009d9a","#a56eff", "#FFA630"])
+      .domain(["Eleanor", "Chidi", "Tahani", "Jason", "Michael", "Janet", "Shawn", "Trevor", "Simone", "Derek", "Mindy", "Doug", "Judge"]);
+
+
       // Define size of SVG drawing area
       vis.svg = d3.select(vis.config.parentElement).append('svg')
           .attr('width', vis.config.containerWidth)
@@ -72,7 +74,7 @@ class ForceDirectedGraph {
       vis.simulation.nodes(vis.data.nodes);
       vis.simulation.force('link').links(vis.data.links);
   
-      vis.colorScale.domain(vis.data.nodes.map(d => d.group));
+      // vis.colorScale.domain(vis.data.nodes.map(d => d.group));
       
       vis.renderVis();
     }
