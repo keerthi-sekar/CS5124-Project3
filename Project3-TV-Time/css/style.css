@@ -11,6 +11,13 @@ body {
 /* line {
     stroke: #545454;
   } */
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
 
 .flex-container {
     display: flex;
