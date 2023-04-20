@@ -8,9 +8,20 @@ body {
     background-color: #79a4ff5e;
 }
 
-/* line {
-    stroke: #545454;
-  } */
+legend { 
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
 
 .flex-container {
     display: flex;
