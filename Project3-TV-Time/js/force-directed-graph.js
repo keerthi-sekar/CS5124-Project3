@@ -16,7 +16,7 @@ class ForceDirectedGraph {
     constructor(_config, _data, _chartname) {
       this.config = {
         parentElement: _config.parentElement,
-        containerWidth: 800,
+        containerWidth: 775,
         containerHeight: 500,
         margin: {top: 5, right: 5, bottom: 5, left: 5}
       }
@@ -52,7 +52,7 @@ class ForceDirectedGraph {
   
       // Initialize force simulation
       vis.simulation = d3.forceSimulation()
-        .force('link', d3.forceLink().id(d => d.id))
+        .force('link', d3.forceLink().id(d => d.id).distance(100))
         .force('charge', d3.forceManyBody())
         .force('center', d3.forceCenter(vis.config.width / 2, vis.config.height / 2));
   
@@ -66,7 +66,7 @@ class ForceDirectedGraph {
       let vis = this;
 
       vis.simulation = d3.forceSimulation()
-      .force('link', d3.forceLink().id(d => d.id))
+      .force('link', d3.forceLink().id(d => d.id).distance(100))
       .force('charge', d3.forceManyBody())
       .force('center', d3.forceCenter(vis.config.width / 2, vis.config.height / 2));
   
@@ -89,6 +89,7 @@ class ForceDirectedGraph {
       vis.links = vis.chart.selectAll('line')
           .data(vis.data.links, d => [d.source, d.target])
           .join('line')
+          .attr('stroke-width', '2')
           .attr('stroke', '#545454'); // Change this to a color scale to show how many scenes they share
   
       // Add nodes
@@ -137,7 +138,7 @@ class ForceDirectedGraph {
 
     vis.nodes
         .on("mouseover", function(event, d) {
-          tooltip.html(d.id + ", Group: " + d.group).style("visibility", "visible");
+          tooltip.html(d.id).style("visibility", "visible");
         })
         .on("mousemove", function(){
           tooltip

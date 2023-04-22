@@ -9,7 +9,7 @@ class WordCloud {
       // Configuration object with defaults
       this.config = {
         parentElement: _config.parentElement,
-        containerWidth: _config.containerWidth || 800,
+        containerWidth: _config.containerWidth || 775,
         containerHeight: _config.containerHeight || 500,
         margin: _config.margin || {top: 5, right: 5, bottom: 5, left: 5},
       }
