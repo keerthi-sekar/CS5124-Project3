@@ -71,14 +71,14 @@ d3.csv('data/script.csv')
     barchartA = new Barchart({
 			parentElement: '#chart1',
 			xAxisTitle: 'Characters'
-		  }, data, character_rollup, 350);
+		  }, data, character_rollup, 350, 90, 470);
 		
 		barchartA.updateVis();
 
     barchartB = new Barchart({
 			parentElement: '#chart2',
 			xAxisTitle: 'Episodes'
-		  }, data, episode_rollup, 750);
+		  }, data, episode_rollup, 750, 50, 450);
 		
 		barchartB.updateVis();
 
@@ -241,13 +241,13 @@ d3.csv('data/script.csv')
      if (relations.find(obj => obj.source === "Jason" || obj.target === "Jason")) nodes.push({"id": "Jason", "group": 1})
      if (relations.find(obj => obj.source === "Michael" || obj.target === "Michael")) nodes.push({"id": "Michael", "group": 2})
      if (relations.find(obj => obj.source === "Janet" || obj.target === "Janet")) nodes.push({"id": "Janet", "group": 2})
-     if (relations.find(obj => obj.source === "Shawn" || obj.target === "Shawn")) nodes.push({"id": "Shawn", "group": 2})
+     if (relations.find(obj => obj.source === "Shawn" || obj.target === "Shawn")) nodes.push({"id": "Shawn", "group": 3})
      if (relations.find(obj => obj.source === "Trevor" || obj.target === "Trevor")) nodes.push({"id": "Trevor", "group": 3})
      if (relations.find(obj => obj.source === "Simone" || obj.target === "Simone")) nodes.push({"id": "Simone", "group": 4})
      if (relations.find(obj => obj.source === "Derek" || obj.target === "Derek")) nodes.push({"id": "Derek", "group": 5})
      if (relations.find(obj => obj.source === "Mindy" || obj.target === "Mindy")) nodes.push({"id": "Mindy", "group": 5})
      if (relations.find(obj => obj.source === "Doug" || obj.target === "Doug")) nodes.push({"id": "Doug", "group": 6})
-     if (relations.find(obj => obj.source === "Judge" || obj.target === "Judge")) nodes.push({"id": "Judge", "group": 6})
+     if (relations.find(obj => obj.source === "Judge" || obj.target === "Judge")) nodes.push({"id": "Judge", "group": 7})
 
     var jsonData = {
       "nodes": nodes,

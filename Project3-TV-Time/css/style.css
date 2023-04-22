@@ -8,9 +8,6 @@ body {
     background-color: #79a4ff5e;
 }
 
-/* line {
-    stroke: #545454;
-  } */
 .dot {
     height: 15px;
     width: 15px;
@@ -87,4 +84,8 @@ img
 .bar.active {
     stroke: #E4D00A;
     stroke-width: 5px;
+}
+
+.table {
+    min-height: 570px;
 }

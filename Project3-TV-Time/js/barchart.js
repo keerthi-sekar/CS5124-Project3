@@ -5,13 +5,13 @@ class Barchart {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data, _map, _width) {
+    constructor(_config, _data, _map, _width, _bMarg, _height) {
       // Configuration object with defaults
       this.config = {
         parentElement: _config.parentElement,
         containerWidth: _config.containerWidth || _width,
-        containerHeight: _config.containerHeight || 466,
-        margin: _config.margin || {top: 10, right: 10, bottom: 85, left: 40},
+        containerHeight: _config.containerHeight || _height,
+        margin: _config.margin || {top: 10, right: 10, bottom: _bMarg, left: 40},
         reverseOrder: _config.reverseOrder || false,
         tooltipPadding: _config.tooltipPadding || 15,
         xAxisTitle: _config.xAxisTitle
